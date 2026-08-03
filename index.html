@@ -114,10 +114,6 @@
     display:flex; align-items:center; gap:.6em;
   }
 
-  /* ---------- Logo / key mark ---------- */
-  .keymark{width:22px;height:22px;flex:none}
-  .keymark circle, .keymark rect, .keymark path{fill:none; stroke:currentColor; stroke-width:1.6}
-
   /* ---------- Header ---------- */
   header{
     position:fixed; top:0; left:0; right:0; z-index:100;
@@ -134,7 +130,6 @@
   }
   .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:18px}
   .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink)}
-  .brand .keymark{color:var(--accent)}
   .brand-word{font-family:'Alegreya',serif; font-weight:800; font-size:1.5rem; letter-spacing:.03em}
   .brand-sub{display:block; font-size:.58rem; letter-spacing:.22em; color:var(--ink-soft); font-weight:600; margin-top:1px}
   .nav-right{display:flex; align-items:center; gap:1.4rem}
@@ -335,10 +330,6 @@
 <header id="siteHeader">
   <div class="container nav-inner">
     <a href="#top" class="brand">
-      <svg class="keymark" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="8" cy="8" r="4.6"/>
-        <path d="M11.2 11.2 L20.5 20.5 M17 17 L19.3 14.7 M14.3 14.3 L16.1 12.5"/>
-      </svg>
       <span>
         <span class="brand-word">TESTA</span>
         <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
