@@ -132,6 +132,20 @@
   .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink)}
   .brand-word{font-family:'Alegreya',serif; font-weight:800; font-size:1.5rem; letter-spacing:.03em}
   .brand-sub{display:block; font-size:.58rem; letter-spacing:.22em; color:var(--ink-soft); font-weight:600; margin-top:1px}
+  .nav-left{display:flex; align-items:center; gap:14px}
+  .menu-toggle{
+    display:none; align-items:center; justify-content:center; width:38px; height:38px; flex:none;
+    border:1px solid var(--line); border-radius:var(--radius); background:transparent; color:var(--ink); cursor:pointer;
+  }
+  .menu-toggle:hover{border-color:var(--accent); color:var(--accent)}
+  .menu-icon{width:18px; height:18px}
+  .menu-icon path{fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round}
+  .mobile-menu{display:none; flex-direction:column; list-style:none; margin:0; padding:8px 0 14px; border-top:1px solid var(--line)}
+  .mobile-menu a{
+    display:block; padding:.85em 0; text-decoration:none; font-weight:600; font-size:.86rem; letter-spacing:.05em;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .mobile-menu a:hover{color:var(--accent)}
   .nav-right{display:flex; align-items:center; gap:1.4rem}
   nav.links{display:flex; gap:2.1rem; list-style:none; margin:0; padding:0}
   nav.links a{
@@ -315,6 +329,8 @@
   /* ---------- Responsive ---------- */
   @media (max-width:900px){
     nav.links{display:none}
+    .menu-toggle{display:inline-flex}
+    .mobile-menu.open{display:flex}
     .hero-grid{grid-template-columns:1fr}
     .hero-art{order:-1}
     .history-wrap{grid-template-columns:1fr}
@@ -329,12 +345,19 @@
 
 <header id="siteHeader">
   <div class="container nav-inner">
-    <a href="#top" class="brand">
-      <span>
-        <span class="brand-word">TESTA</span>
-        <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
-      </span>
-    </a>
+    <div class="nav-left">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Μενού" aria-haspopup="true" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+      <a href="#top" class="brand">
+        <span>
+          <span class="brand-word">TESTA</span>
+          <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
+        </span>
+      </a>
+    </div>
     <div class="nav-right">
       <nav class="links" aria-label="Κύρια πλοήγηση">
         <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
@@ -356,6 +379,11 @@
       </div>
     </div>
   </div>
+  <nav class="mobile-menu container" id="mobileMenu" aria-label="Κύρια πλοήγηση (κινητό)">
+    <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
+    <a href="#products" data-i18n="nav.products">ΠΡΟΪΟΝΤΑ</a>
+    <a href="#contact" data-i18n="nav.contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -989,6 +1017,30 @@
     });
     try { localStorage.setItem('testa-lang', lang); } catch(e) {}
   }
+
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMobileMenu(){
+    mobileMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+  function openMobileMenu(){
+    mobileMenu.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+  }
+  menuToggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    if (mobileMenu.classList.contains('open')) closeMobileMenu(); else openMobileMenu();
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMobileMenu);
+  });
+  document.addEventListener('click', function(e){
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMobileMenu();
+  });
 
   var langSwitch = document.getElementById('langSwitch');
   var langCurrent = document.getElementById('langCurrent');
