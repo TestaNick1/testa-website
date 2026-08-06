@@ -231,6 +231,7 @@
       linear-gradient(180deg, var(--bg-soft), var(--bg));
     overflow:hidden;
   }
+  @media (min-width:901px){ .hero{padding-top:190px} }
   .hero-grid{display:grid; grid-template-columns: 1.05fr .95fr; gap:clamp(30px,5vw,70px); align-items:center; position:relative; z-index:2}
   .hero h1{font-size:clamp(2.5rem, 4.6vw, 4.1rem); margin-bottom:.32em}
   .hero h1 em{font-style:normal; color:var(--accent)}
@@ -305,15 +306,41 @@
   .prod-card{
     background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
     overflow:hidden; transition:transform .3s ease, box-shadow .3s ease; position:relative;
+    cursor:pointer;
   }
   .prod-card:hover{transform:translateY(-5px); box-shadow:var(--shadow)}
+  .prod-card:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
   .prod-photo{aspect-ratio:1/1; background:#fff; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:14px}
   .prod-photo img{width:100%; height:100%; object-fit:contain; transition:transform .5s ease}
   .prod-card:hover .prod-photo img{transform:scale(1.06)}
-  .prod-info{padding:1.1rem 1.2rem 1.3rem}
+  .prod-info{padding:1.1rem 2.5rem 1.3rem 1.2rem; position:relative}
   .prod-code{font-family: ui-monospace, 'SF Mono', Consolas, monospace; font-size:.72rem; letter-spacing:.06em; color:var(--accent); font-weight:700}
   .prod-info h4{font-size:1rem; margin:.35em 0 .3em; font-weight:700; font-family:'Source Sans',sans-serif}
   .prod-info p{font-size:.85rem; margin:0}
+  .prod-more{display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; border:1px solid var(--line); position:absolute; right:1.1rem; top:1.1rem; color:var(--ink-soft); transition:border-color .2s, color .2s}
+  .prod-card:hover .prod-more{border-color:var(--accent); color:var(--accent)}
+  .prod-more svg{width:10px; height:10px; transition:transform .3s ease}
+  .prod-card.is-open .prod-more{border-color:var(--accent); color:var(--accent)}
+  .prod-card.is-open .prod-more svg{transform:rotate(180deg)}
+  .prod-detail{max-height:0; overflow:hidden; opacity:0; transition:max-height .35s ease, opacity .3s ease}
+  .prod-card.is-open .prod-detail{max-height:460px; opacity:1}
+  .prod-detail-inner{margin:0 1.2rem; padding-top:1rem; padding-bottom:1.3rem; border-top:1px solid var(--line)}
+  .prod-detail-cat{display:inline-block; font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); background:var(--accent-soft); border-radius:999px; padding:.3em .8em; margin-bottom:.8em}
+  .prod-spec-label{display:block; font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); font-weight:700; margin-bottom:.5em}
+  .prod-spec-list{list-style:none; margin:0 0 .9em; padding:0; font-size:.82rem; color:var(--ink-soft)}
+  .prod-spec-list li{position:relative; padding-left:1em; margin-bottom:.35em; line-height:1.4}
+  .prod-spec-list li::before{content:"–"; position:absolute; left:0; color:var(--accent)}
+
+  /* ---------- Reviews ---------- */
+  .rev-bar{display:flex; justify-content:center; padding-top:14px}
+  .rev-badge{display:inline-flex; align-items:center; gap:22px; text-decoration:none}
+  .rev-badge:hover .rev-badge-brand{color:var(--accent)}
+  .rev-badge-g{width:52px; height:52px; flex:none}
+  .rev-badge-text{display:flex; align-items:center; gap:1.2em}
+  .rev-badge-brand{font-size:1.3rem; font-weight:700; letter-spacing:.02em; color:var(--ink-soft); white-space:nowrap}
+  .rev-badge-score{font-family:'Alegreya',serif; font-weight:800; font-size:2.2rem; color:var(--ink); line-height:1; padding-left:1.1em; border-left:1px solid var(--line)}
+  .rev-stars{color:#e0a02e; font-size:1.7rem; letter-spacing:.06em}
+  @media (max-width:900px){ .rev-bar{display:none} }
 
   /* ---------- Contact ---------- */
   .contact-wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(30px,6vw,70px); align-items:start}
@@ -340,7 +367,7 @@
   }
   .field input:focus, .field textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
   .field textarea{resize:vertical; min-height:120px}
-  .form-note{font-size:.78rem; color:var(--ink-soft); margin:.4rem 0 1.3rem}
+  .form-note{font-size:.78rem; color:var(--ink-soft); margin:.4rem 0 1.3rem; word-spacing:.25em}
   .submit-btn{border:none; cursor:pointer; font-family:inherit}
   .form-status{font-size:.85rem; margin-top:.9rem; min-height:1.2em}
 
@@ -386,7 +413,7 @@
       </button>
       <a href="#top" class="brand">
         <span>
-          <span class="brand-word">TESTA</span>
+          <span class="brand-word">Testa</span>
           <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
         </span>
       </a>
@@ -411,6 +438,21 @@
         </ul>
       </div>
     </div>
+  </div>
+  <div class="container rev-bar">
+    <a class="rev-badge" href="https://www.google.com/maps/place/%CE%A1%CE%9F%CE%A5%CE%9C%CE%95%CE%9B%CE%99%CE%A9%CE%A4%CE%97%CE%A3,+%CE%99.,+%26+%CE%A3%CE%99%CE%91+%CE%9F.%CE%95./@37.9796841,23.6964708,864m/data=!3m1!1e3!4m6!3m5!1s0x14a1bce9e0546139:0x24308d9eb6ec6207!8m2!3d37.9796841!4d23.6990457!16s%2Fg%2F1tj824ln" target="_blank" rel="noopener" aria-label="4,3 από 5 αστέρια στο Google Reviews">
+      <svg class="rev-badge-g" viewBox="0 0 48 48" aria-hidden="true">
+        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+        <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+        <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+        <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+      </svg>
+      <span class="rev-badge-text">
+        <span class="rev-badge-brand">Google Reviews</span>
+        <span class="rev-badge-score">4,3</span>
+        <span class="rev-stars" aria-hidden="true">★★★★☆</span>
+      </span>
+    </a>
   </div>
   <nav class="mobile-menu container" id="mobileMenu" aria-label="Κύρια πλοήγηση (κινητό)">
     <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
@@ -504,19 +546,19 @@
           <span class="cat-num" data-i18n="cat1.num">01. Αλουμίνιο</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: χρώμιο|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ.">
             <div class="prod-photo"><img src="images/product-01.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Testa"></div>
             <div class="prod-info"><span class="prod-code">1410-20</span><h4 data-i18n="p1t">Στενή ασφ. 20άρα Testa</h4><p data-i18n="p1d">Χρώμιο, με κύλινδρο 54χιλ.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ.">
             <div class="prod-photo"><img src="images/product-02.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo με κύλινδρο"></div>
             <div class="prod-info"><span class="prod-code">1460-20</span><h4 data-i18n="p2t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p2d">Με κύλινδρο 54χιλ., ορείχαλκος.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Χωρίς κύλινδρο|Συσκευασία: 48 τεμ.">
             <div class="prod-photo"><img src="images/product-03.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo χωρίς κύλινδρο"></div>
             <div class="prod-info"><span class="prod-code">1460-20 Χ/Κ</span><h4 data-i18n="p3t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p3d">Χωρίς κύλινδρο.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κλειδιά: (2) χρωμιωμένα|Συσκευασία: 48 τεμ.">
             <div class="prod-photo"><img src="images/product-04.webp" loading="lazy" alt="Στενή ασφάλεια Νο 20x8 Testa με μεγάλο κλειδί"></div>
             <div class="prod-info"><span class="prod-code">1480-20</span><h4 data-i18n="p4t">Στενή Νο 20x8 Testa</h4><p data-i18n="p4d">Με μεγάλο κλειδί.</p></div>
           </article>
@@ -544,15 +586,15 @@
           <span class="cat-num" data-i18n="cat2.num">02. Σιδήρου/Ξύλου</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Ειδικά επιμεταλλωμένα εξαρτήματα για αντοχή στη διάβρωση|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
             <div class="prod-photo"><img src="images/product-08.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα"></div>
             <div class="prod-info"><span class="prod-code">35100</span><h4 data-i18n="p8t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p8d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Περιέχει αντίκρισμα|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
             <div class="prod-photo"><img src="images/product-09.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα με αντίκρισμα"></div>
             <div class="prod-info"><span class="prod-code">35100 S</span><h4 data-i18n="p9t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p9d">Δεξιά ή αριστερή, με αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρο: 55mm|Με κύλινδρο ασφαλείας, για μεταλλικές πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
             <div class="prod-photo"><img src="images/product-10.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 55άρα"></div>
             <div class="prod-info"><span class="prod-code">55100</span><h4 data-i18n="p10t">Κουτιαστή ασφάλεια 55άρα</h4><p data-i18n="p10d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
           </article>
@@ -564,7 +606,7 @@
             <div class="prod-photo"><img src="images/product-12.webp" loading="lazy" alt="Κουτιαστή τραβηχτή 50άρα με αντίκρισμα"></div>
             <div class="prod-info"><span class="prod-code">36100 S</span><h4 data-i18n="p12t">Κουτιαστή τραβηχτή 50άρα</h4><p data-i18n="p12d">Με μεγάλο κλειδί, Δ/Α, με αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Για κλειδαριές κουτιαστές, ασφαλείας και απλές|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξί (Δ) και αριστερό (Α)|Συσκευασία: 10 τεμ.">
             <div class="prod-photo"><img src="images/product-13.webp" loading="lazy" alt="Αντίκρισμα για κλειδαριές κουτιαστές"></div>
             <div class="prod-info"><span class="prod-code">36120</span><h4 data-i18n="p13t">Αντίκρισμα κουτιαστής</h4><p data-i18n="p13d">Για κλειδαριές κουτιαστές, Δ/Α.</p></div>
           </article>
@@ -580,15 +622,15 @@
           <span class="cat-num" data-i18n="cat3.num">03. Ξύλου</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά επιχρυσωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: ορειχάλκωση|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
             <div class="prod-photo"><img src="images/product-14.webp" loading="lazy" alt="Μεσόπορτας Testa κίτρινη"></div>
             <div class="prod-info"><span class="prod-code">2010-40</span><h4 data-i18n="p14t">Μεσόπορτας Testa</h4><p data-i18n="p14d">Κίτρινη, κέντρα 40-75.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά χρωμιωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: χρώμιο|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
             <div class="prod-photo"><img src="images/product-15.webp" loading="lazy" alt="Μεσόπορτας Testa χρώμιο"></div>
             <div class="prod-info"><span class="prod-code">2030-40</span><h4 data-i18n="p15t">Μεσόπορτας Testa</h4><p data-i18n="p15d">Χρώμιο, κέντρα 40-75.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κέντρα: 40x75|Κλειδαριά Primo για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά ορειχαλκωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: πρόσοψη και αντίκρισμα βαμμένα ηλεκτροστατικά με χρυσό|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
             <div class="prod-photo"><img src="images/product-16.webp" loading="lazy" alt="Μεσόπορτας Primo βαμμένη χρυσή"></div>
             <div class="prod-info"><span class="prod-code">2040-40</span><h4 data-i18n="p16t">Μεσόπορτας Primo</h4><p data-i18n="p16d">Βαμμένη χρυσή, κέντρα 40-75.</p></div>
           </article>
@@ -620,18 +662,6 @@
             <div class="prod-photo"><img src="images/product-20.webp" loading="lazy" alt="Απλός κύλινδρος ασφαλείας"></div>
             <div class="prod-info"><span class="prod-code">015</span><h4 data-i18n="p20t">Κύλινδρος απλός</h4><p data-i18n="p20d">Επιμεταλλωμένο φινίρισμα.</p></div>
           </article>
-          <article class="prod-card">
-            <div class="prod-photo"><img src="images/product-21.webp" loading="lazy" alt="Κύλινδρος ασφαλείας χρυσός"></div>
-            <div class="prod-info"><span class="prod-code">030</span><h4 data-i18n="p21t">Κύλινδρος ασφαλείας</h4><p data-i18n="p21d">Φινίρισμα χρυσό.</p></div>
-          </article>
-          <article class="prod-card">
-            <div class="prod-photo"><img src="images/product-22.webp" loading="lazy" alt="Μισός κύλινδρος ασφαλείας"></div>
-            <div class="prod-info"><span class="prod-code">060</span><h4 data-i18n="p22t">Κύλινδρος μισός</h4><p data-i18n="p22d">Επιμεταλλωμένο φινίρισμα.</p></div>
-          </article>
-          <article class="prod-card">
-            <div class="prod-photo"><img src="images/product-23.webp" loading="lazy" alt="Κύλινδρος με πόμολο"></div>
-            <div class="prod-info"><span class="prod-code">065</span><h4 data-i18n="p23t">Κύλινδρος με πόμολο</h4><p data-i18n="p23d">Επιμεταλλωμένος, ενισχυμένος.</p></div>
-          </article>
         </div>
       </div>
 
@@ -644,31 +674,31 @@
           <span class="cat-num" data-i18n="cat5.num">05. Κλειδιά</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 4 διαφορετικούς συνδυασμούς">
             <div class="prod-photo"><img src="images/product-24.webp" loading="lazy" alt="Κλειδί επίπλων γαλβανιζέ"></div>
             <div class="prod-info"><span class="prod-code">82010</span><h4 data-i18n="p24t">Κλειδί επίπλων</h4><p data-i18n="p24d">Γαλβανιζέ, σε 4 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
             <div class="prod-photo"><img src="images/product-25.webp" loading="lazy" alt="Κλειδί τραβηχτής γαλβανιζέ"></div>
             <div class="prod-info"><span class="prod-code">82030</span><h4 data-i18n="p25t">Κλειδί τραβηχτής</h4><p data-i18n="p25d">Γαλβανιζέ, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Φινίρισμα: ορειχαλκωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
             <div class="prod-photo"><img src="images/product-26.webp" loading="lazy" alt="Κλειδί μεσόπορτας κίτρινο ορειχαλκωμένο"></div>
             <div class="prod-info"><span class="prod-code">82050</span><h4 data-i18n="p26t">Κλειδί μεσόπορτας</h4><p data-i18n="p26d">Κίτρινο ορειχαλκωμένο, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Φινίρισμα: χρωμιωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
             <div class="prod-photo"><img src="images/product-27.webp" loading="lazy" alt="Κλειδί μεσόπορτας χρώμιο"></div>
             <div class="prod-info"><span class="prod-code">82055</span><h4 data-i18n="p27t">Κλειδί μεσόπορτας</h4><p data-i18n="p27d">Χρώμιο, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κλειδί '3' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, με συνδυασμό">
             <div class="prod-photo"><img src="images/product-28.webp" loading="lazy" alt="Κλειδί ασφαλείας 81001"></div>
             <div class="prod-info"><span class="prod-code">81001</span><h4 data-i18n="p28t">Κλειδί ασφαλείας</h4><p data-i18n="p28d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κλειδί '4' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο">
             <div class="prod-photo"><img src="images/product-29.webp" loading="lazy" alt="Κλειδί ασφαλείας 81010"></div>
             <div class="prod-info"><span class="prod-code">81010</span><h4 data-i18n="p29t">Κλειδί ασφαλείας</h4><p data-i18n="p29d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Κλειδί '5' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο">
             <div class="prod-photo"><img src="images/product-30.webp" loading="lazy" alt="Κλειδί ασφαλείας 81030"></div>
             <div class="prod-info"><span class="prod-code">81030</span><h4 data-i18n="p30t">Κλειδί ασφαλείας</h4><p data-i18n="p30d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
@@ -688,11 +718,11 @@
             <div class="prod-photo"><img src="images/product-31.webp" loading="lazy" alt="Αντίκρισμα απλό"></div>
             <div class="prod-info"><span class="prod-code">85020</span><h4 data-i18n="p31t">Αντίκρισμα απλό</h4><p data-i18n="p31d">Για κλειδαριές κουτιαστές.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Για κλειδαριά μεσόπορτας 2040-40">
             <div class="prod-photo"><img src="images/product-32.webp" loading="lazy" alt="Αντίκρισμα βαμμένο χρυσό για την κλειδαριά 2040-40"></div>
             <div class="prod-info"><span class="prod-code">85005</span><h4 data-i18n="p32t">Αντίκρισμα βαμμένο χρυσό</h4><p data-i18n="p32d">Για την κλειδαριά 2040-40.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Για κλειδαριά μεσόπορτας 2010-40">
             <div class="prod-photo"><img src="images/product-33.webp" loading="lazy" alt="Αντίκρισμα ορειχαλκωμένο για την κλειδαριά 2010-40"></div>
             <div class="prod-info"><span class="prod-code">85010</span><h4 data-i18n="p33t">Αντίκρισμα ορειχαλκωμένο</h4><p data-i18n="p33d">Για την κλειδαριά 2010-40.</p></div>
           </article>
@@ -700,15 +730,15 @@
             <div class="prod-photo"><img src="images/product-34.webp" loading="lazy" alt="Αντίκρισμα χρώμιο για την κλειδαριά 2030-40"></div>
             <div class="prod-info"><span class="prod-code">85015</span><h4 data-i18n="p34t">Αντίκρισμα χρώμιο</h4><p data-i18n="p34d">Για την κλειδαριά 2030-40.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Δύο σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
             <div class="prod-photo"><img src="images/product-35.webp" loading="lazy" alt="Ηλεκτρικό κυπρί"></div>
             <div class="prod-info"><span class="prod-code">51020</span><h4 data-i18n="p35t">Ηλεκτρικό κυπρί</h4><p data-i18n="p35d">8-12V, χρώμιο, δύο σημεία στήριξης.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Τέσσερα σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
             <div class="prod-photo"><img src="images/product-36.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με τέσσερα σημεία στήριξης"></div>
             <div class="prod-info"><span class="prod-code">51020-AL</span><h4 data-i18n="p45t">Ηλεκτρικό κυπρί</h4><p data-i18n="p45d">8-12V, χρώμιο, τέσσερα σημεία στήριξης.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες με &quot;μακριά&quot; λάμα, υψηλής αντοχής|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
             <div class="prod-photo"><img src="images/product-37.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με μακριά λάμα"></div>
             <div class="prod-info"><span class="prod-code">51300</span><h4 data-i18n="p36t">Ηλεκτρικό κυπρί</h4><p data-i18n="p36d">8-12V, χρώμιο, με μακριά λάμα.</p></div>
           </article>
@@ -921,6 +951,7 @@
       de:"Wir fertigen vollständige Serien von Sicherheitsmechanismen für Aluminium-, Eisen- und Holztüren, vom Zylinder bis zum letzten Schlüssel.",
       fr:"Nous fabriquons des gammes complètes de mécanismes de sécurité pour portes en aluminium, en fer et en bois, du cylindre jusqu'à la dernière clé."
     },
+    "prod.specLabel": {el:"Τεχνικά στοιχεία", en:"Technical details", it:"Dettagli tecnici", de:"Technische Details", fr:"Détails techniques"},
 
     "cat1.h": {el:"Κλειδαριές για Πόρτες Αλουμινίου", en:"Locks for Aluminium Doors", it:"Serrature per Porte in Alluminio", de:"Schlösser für Aluminiumtüren", fr:"Serrures pour Portes en Aluminium"},
     "cat1.d": {el:"Στενές και γλωσσάτες ασφάλειες Testa & Primo για πόρτες αλουμινίου, με ή χωρίς κύλινδρο.", en:"Narrow and latch locks by Testa & Primo for aluminium doors, with or without cylinder.", it:"Serrature strette e a scrocco Testa & Primo per porte in alluminio, con o senza cilindro.", de:"Schmale Schlösser und Fallenschlösser von Testa & Primo für Aluminiumtüren, mit oder ohne Zylinder.", fr:"Serrures étroites et à mentonnet Testa & Primo pour portes en aluminium, avec ou sans cylindre."},
@@ -935,7 +966,7 @@
     "cat3.num": {el:"03. Ξύλου", en:"03. Wood", it:"03. Legno", de:"03. Holz", fr:"03. Bois"},
 
     "cat4.h": {el:"Κύλινδροι Απλοί", en:"Simple Cylinders", it:"Cilindri Semplici", de:"Einfache Zylinder", fr:"Cylindres Simples"},
-    "cat4.d": {el:"Απλοί, μισοί και κύλινδροι με πόμολο, σε επιμεταλλωμένα και χρυσά φινιρίσματα.", en:"Simple, half and knob cylinders, in plated and gold finishes.", it:"Cilindri semplici, mezzi cilindri e con pomolo, in finiture placcate e dorate.", de:"Einfache Zylinder, Halbzylinder und Knaufzylinder, in beschichteten und goldenen Ausführungen.", fr:"Cylindres simples, demi-cylindres et à bouton, en finitions plaquées et dorées."},
+    "cat4.d": {el:"Απλοί κύλινδροι, σε επιμεταλλωμένο φινίρισμα.", en:"Simple cylinders, in plated finish.", it:"Cilindri semplici, in finitura placcata.", de:"Einfache Zylinder, in beschichteter Ausführung.", fr:"Cylindres simples, en finition plaquée."},
     "cat4.num": {el:"04. Κύλινδροι", en:"04. Cylinders", it:"04. Cilindri", de:"04. Zylinder", fr:"04. Cylindres"},
 
     "cat5.h": {el:"Κλειδιά", en:"Keys", it:"Chiavi", de:"Schlüssel", fr:"Clés"},
@@ -989,12 +1020,6 @@
 
     "p20t": {el:"Κύλινδρος απλός", en:"Simple Cylinder", it:"Cilindro Semplice", de:"Einfacher Zylinder", fr:"Cylindre Simple"},
     "p20d": {el:"Επιμεταλλωμένο φινίρισμα.", en:"Plated finish.", it:"Finitura placcata.", de:"Beschichtetes Finish.", fr:"Finition plaquée."},
-    "p21t": {el:"Κύλινδρος ασφαλείας", en:"Security Cylinder", it:"Cilindro di Sicurezza", de:"Sicherheitszylinder", fr:"Cylindre de Sécurité"},
-    "p21d": {el:"Φινίρισμα χρυσό.", en:"Gold finish.", it:"Finitura dorata.", de:"Goldenes Finish.", fr:"Finition dorée."},
-    "p22t": {el:"Κύλινδρος μισός", en:"Half Cylinder", it:"Mezzo Cilindro", de:"Halbzylinder", fr:"Demi-Cylindre"},
-    "p22d": {el:"Επιμεταλλωμένο φινίρισμα.", en:"Plated finish.", it:"Finitura placcata.", de:"Beschichtetes Finish.", fr:"Finition plaquée."},
-    "p23t": {el:"Κύλινδρος με πόμολο", en:"Knob Cylinder", it:"Cilindro con Pomolo", de:"Knaufzylinder", fr:"Cylindre à Bouton"},
-    "p23d": {el:"Επιμεταλλωμένος, ενισχυμένος.", en:"Plated, reinforced.", it:"Placcato, rinforzato.", de:"Beschichtet, verstärkt.", fr:"Plaqué, renforcé."},
 
     "p24t": {el:"Κλειδί επίπλων", en:"Furniture Key", it:"Chiave per Mobili", de:"Möbelschlüssel", fr:"Clé de Meuble"},
     "p24d": {el:"Γαλβανιζέ, σε 4 συνδυασμούς.", en:"Galvanized, in 4 combinations.", it:"Zincata, in 4 combinazioni.", de:"Verzinkt, in 4 Kombinationen.", fr:"Galvanisée, en 4 combinaisons."},
@@ -1025,6 +1050,7 @@
     "p36d": {el:"8-12V, χρώμιο, με μακριά λάμα.", en:"8-12V, chrome, with long strike plate.", it:"8-12V, cromata, con piastra lunga.", de:"8-12V, verchromt, mit langem Schließblech.", fr:"8-12V, chromée, avec gâche longue."},
     "p45t": {el:"Ηλεκτρικό κυπρί", en:"Electric Strike", it:"Elettroserratura", de:"Elektrischer Türöffner", fr:"Gâche Électrique"},
     "p45d": {el:"8-12V, χρώμιο, τέσσερα σημεία στήριξης.", en:"8-12V, chrome, four mounting points.", it:"8-12V, cromata, quattro punti di fissaggio.", de:"8-12V, verchromt, vier Befestigungspunkte.", fr:"8-12V, chromée, quatre points de fixation."},
+
 
     "contact.eyebrow": {el:"ΕΠΙΚΟΙΝΩΝΙΑ", en:"CONTACT", it:"CONTATTI", de:"KONTAKT", fr:"CONTACT"},
     "contact.h2": {el:"Μιλήστε μαζί μας.", en:"Get in touch.", it:"Parliamone.", de:"Sprechen Sie mit uns.", fr:"Parlons-en."},
@@ -1158,6 +1184,63 @@
     var isCurrent = btn.getAttribute('data-lang') === currentLang;
     btn.classList.toggle('is-active', isCurrent);
     if (isCurrent) langCurrentLabel.textContent = btn.textContent;
+  });
+  document.querySelectorAll('.prod-card').forEach(function(card){
+    var catHead = card.closest('.cat-block').querySelector('.cat-head h3');
+    var catKey = catHead.getAttribute('data-i18n');
+
+    var more = document.createElement('span');
+    more.className = 'prod-more';
+    more.setAttribute('aria-hidden', 'true');
+    more.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 9l7 7 7-7"/></svg>';
+    card.querySelector('.prod-info').appendChild(more);
+
+    var detail = document.createElement('div');
+    detail.className = 'prod-detail';
+    var catSpan = document.createElement('span');
+    catSpan.className = 'prod-detail-cat';
+    catSpan.setAttribute('data-i18n', catKey);
+    catSpan.textContent = catHead.textContent;
+    var inner = document.createElement('div');
+    inner.className = 'prod-detail-inner';
+    inner.appendChild(catSpan);
+    if (card.dataset.spec) {
+      var specLabel = document.createElement('span');
+      specLabel.className = 'prod-spec-label';
+      specLabel.setAttribute('data-i18n', 'prod.specLabel');
+      specLabel.textContent = 'Τεχνικά στοιχεία';
+      inner.appendChild(specLabel);
+      var specList = document.createElement('ul');
+      specList.className = 'prod-spec-list';
+      card.dataset.spec.split('|').forEach(function(line){
+        var li = document.createElement('li');
+        li.textContent = line;
+        specList.appendChild(li);
+      });
+      inner.appendChild(specList);
+    }
+    detail.appendChild(inner);
+    card.appendChild(detail);
+
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-expanded', 'false');
+
+    function toggle(){
+      var open = card.classList.toggle('is-open');
+      card.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    card.addEventListener('click', function(e){
+      if (e.target.closest('a')) return;
+      toggle();
+    });
+    card.addEventListener('keydown', function(e){
+      if (e.target.closest('a')) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
   });
   applyLanguage(currentLang);
 
