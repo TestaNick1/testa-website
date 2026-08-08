@@ -1,6 +1,7 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-<head>
+<!DOCTYPE html>
+<html lang="fr"><head></head><body>﻿
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TESTA · Ι. Ρουμελιώτης &amp; Σια Ο.Ε</title>
@@ -402,8 +403,19 @@
   }
   .field input:focus, .field textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
   .field textarea{resize:vertical; min-height:120px}
+  .prod-search{position:relative; max-width:420px; margin:0 0 2.2rem}
+  .prod-search input{width:100%; padding:.85em 1em .85em 2.6em; border:1px solid var(--line); border-radius:var(--radius); background:var(--bg-card); color:var(--ink); font-family:inherit; font-size:.95rem}
+  .prod-search input:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+  .prod-search input::-webkit-search-cancel-button{cursor:pointer}
+  .prod-search-icon{position:absolute; left:.9em; top:50%; transform:translateY(-50%); width:18px; height:18px; color:var(--ink-soft); pointer-events:none}
+  .prod-search-empty{color:var(--ink-soft); font-size:.9rem; margin:-1rem 0 2rem}
+  .cat-block.is-hidden, .prod-card.is-hidden{display:none}
   .form-note{font-size:.78rem; color:var(--ink-soft); margin:.4rem 0 1.3rem; word-spacing:.25em}
+  .field-consent{display:flex; align-items:flex-start; gap:.6em; margin:0 0 1.3rem; font-size:.82rem; color:var(--ink-soft); line-height:1.4}
+  .field-consent input[type="checkbox"]{margin-top:.2em; width:16px; height:16px; accent-color:var(--accent); cursor:pointer; flex-shrink:0}
+  .field-consent label{cursor:pointer}
   .submit-btn{border:none; cursor:pointer; font-family:inherit}
+  .submit-btn:disabled{opacity:.5; cursor:not-allowed}
   .form-status{font-size:.85rem; margin-top:.9rem; min-height:1.2em}
 
   /* ---------- Footer ---------- */
@@ -435,15 +447,15 @@
 <noscript>
 <style>.reveal{opacity:1 !important; transform:none !important}</style>
 </noscript>
-</head>
-<body>
+
+
 
 <header id="siteHeader">
   <div class="container nav-inner">
     <div class="nav-left">
       <button type="button" class="menu-toggle" id="menuToggle" aria-label="Μενού" aria-haspopup="true" aria-expanded="false" aria-controls="mobileMenu">
         <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 6h18M3 12h18M3 18h18"/>
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
         </svg>
       </button>
       <a href="#top" class="brand">
@@ -453,81 +465,81 @@
     </div>
     <div class="nav-right">
       <nav class="links" aria-label="Κύρια πλοήγηση">
-        <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
-        <a href="#products" data-i18n="nav.products">ΠΡΟΪΟΝΤΑ</a>
-        <a href="#contact" data-i18n="nav.contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        <a href="#history" data-i18n="nav.history">NOTRE HISTOIRE</a>
+        <a href="#products" data-i18n="nav.products">PRODUITS</a>
+        <a href="#contact" data-i18n="nav.contact">CONTACT</a>
       </nav>
-      <a class="nav-cta" href="../files/testa-catalog.pdf" download data-i18n="nav.catalog">ΚΑΤΕΒΑΣΤΕ ΤΟΝ ΚΑΤΑΛΟΓΟ</a>
+      <a class="nav-cta" href="../files/testa-catalog.pdf" download="" data-i18n="nav.catalog">TÉLÉCHARGER LE CATALOGUE</a>
       <div class="nav-social" aria-label="Ακολουθήστε μας στα κοινωνικά δίκτυα">
         <a class="nav-social-link" href="https://www.instagram.com/j.r.testa/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <defs>
               <radialGradient id="igGrad-nav" cx="30%" cy="107%" r="150%">
-                <stop offset="0%" stop-color="#fdf497"/>
-                <stop offset="5%" stop-color="#fdf497"/>
-                <stop offset="45%" stop-color="#fd5949"/>
-                <stop offset="60%" stop-color="#d6249f"/>
-                <stop offset="90%" stop-color="#285AEB"/>
+                <stop offset="0%" stop-color="#fdf497"></stop>
+                <stop offset="5%" stop-color="#fdf497"></stop>
+                <stop offset="45%" stop-color="#fd5949"></stop>
+                <stop offset="60%" stop-color="#d6249f"></stop>
+                <stop offset="90%" stop-color="#285AEB"></stop>
               </radialGradient>
             </defs>
-            <path fill="url(#igGrad-nav)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+            <path fill="url(#igGrad-nav)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
           </svg>
         </a>
         <a class="nav-social-link" href="https://www.tiktok.com/@testa.gr" target="_blank" rel="noopener" aria-label="TikTok">
           <svg viewBox="0 0 260 292" aria-hidden="true">
-            <path fill="#FF004F" d="M191.102,105.182c18.814,13.442,41.862,21.351,66.755,21.351V78.656c-4.711,0.001-9.41-0.49-14.019-1.466v37.686c-24.891,0-47.936-7.909-66.755-21.35v97.703c0,48.876-39.642,88.495-88.54,88.495c-18.245,0-35.203-5.513-49.29-14.968c16.078,16.431,38.5,26.624,63.306,26.624c48.901,0,88.545-39.619,88.545-88.497v-97.701H191.102z M208.396,56.88c-9.615-10.499-15.928-24.067-17.294-39.067v-6.158h-13.285C181.161,30.72,192.567,47.008,208.396,56.88L208.396,56.88z M70.181,227.25c-5.372-7.04-8.275-15.652-8.262-24.507c0-22.354,18.132-40.479,40.502-40.479c4.169-0.001,8.313,0.637,12.286,1.897v-48.947c-4.643-0.636-9.329-0.906-14.013-0.807v38.098c-3.976-1.26-8.122-1.9-12.292-1.896c-22.37,0-40.501,18.123-40.501,40.48C47.901,206.897,56.964,220.583,70.181,227.25z"/>
-            <path fill="var(--ink)" d="M177.083,93.525c18.819,13.441,41.864,21.35,66.755,21.35V77.189c-13.894-2.958-26.194-10.215-35.442-20.309c-15.83-9.873-27.235-26.161-30.579-45.225h-34.896v191.226c-0.079,22.293-18.18,40.344-40.502,40.344c-13.154,0-24.84-6.267-32.241-15.975c-13.216-6.667-22.279-20.354-22.279-36.16c0-22.355,18.131-40.48,40.501-40.48c4.286,0,8.417,0.667,12.292,1.896v-38.098c-48.039,0.992-86.674,40.224-86.674,88.474c0,24.086,9.621,45.921,25.236,61.875c14.087,9.454,31.045,14.968,49.29,14.968c48.899,0,88.54-39.621,88.54-88.496V93.525L177.083,93.525z"/>
-            <path fill="#00F2EA" d="M243.838,77.189V66.999c-12.529,0.019-24.812-3.488-35.442-10.12C217.806,67.176,230.197,74.276,243.838,77.189z M177.817,11.655c-0.319-1.822-0.564-3.656-0.734-5.497V0h-48.182v191.228c-0.077,22.29-18.177,40.341-40.501,40.341c-6.554,0-12.742-1.555-18.222-4.318c7.401,9.707,19.087,15.973,32.241,15.973c22.32,0,40.424-18.049,40.502-40.342V11.655H177.817z M100.694,114.408V103.56c-4.026-0.55-8.085-0.826-12.149-0.824C39.642,102.735,0,142.356,0,191.228c0,30.64,15.58,57.643,39.255,73.527c-15.615-15.953-25.236-37.789-25.236-61.874C14.019,154.632,52.653,115.4,100.694,114.408z"/>
+            <path fill="#FF004F" d="M191.102,105.182c18.814,13.442,41.862,21.351,66.755,21.351V78.656c-4.711,0.001-9.41-0.49-14.019-1.466v37.686c-24.891,0-47.936-7.909-66.755-21.35v97.703c0,48.876-39.642,88.495-88.54,88.495c-18.245,0-35.203-5.513-49.29-14.968c16.078,16.431,38.5,26.624,63.306,26.624c48.901,0,88.545-39.619,88.545-88.497v-97.701H191.102z M208.396,56.88c-9.615-10.499-15.928-24.067-17.294-39.067v-6.158h-13.285C181.161,30.72,192.567,47.008,208.396,56.88L208.396,56.88z M70.181,227.25c-5.372-7.04-8.275-15.652-8.262-24.507c0-22.354,18.132-40.479,40.502-40.479c4.169-0.001,8.313,0.637,12.286,1.897v-48.947c-4.643-0.636-9.329-0.906-14.013-0.807v38.098c-3.976-1.26-8.122-1.9-12.292-1.896c-22.37,0-40.501,18.123-40.501,40.48C47.901,206.897,56.964,220.583,70.181,227.25z"></path>
+            <path fill="var(--ink)" d="M177.083,93.525c18.819,13.441,41.864,21.35,66.755,21.35V77.189c-13.894-2.958-26.194-10.215-35.442-20.309c-15.83-9.873-27.235-26.161-30.579-45.225h-34.896v191.226c-0.079,22.293-18.18,40.344-40.502,40.344c-13.154,0-24.84-6.267-32.241-15.975c-13.216-6.667-22.279-20.354-22.279-36.16c0-22.355,18.131-40.48,40.501-40.48c4.286,0,8.417,0.667,12.292,1.896v-38.098c-48.039,0.992-86.674,40.224-86.674,88.474c0,24.086,9.621,45.921,25.236,61.875c14.087,9.454,31.045,14.968,49.29,14.968c48.899,0,88.54-39.621,88.54-88.496V93.525L177.083,93.525z"></path>
+            <path fill="#00F2EA" d="M243.838,77.189V66.999c-12.529,0.019-24.812-3.488-35.442-10.12C217.806,67.176,230.197,74.276,243.838,77.189z M177.817,11.655c-0.319-1.822-0.564-3.656-0.734-5.497V0h-48.182v191.228c-0.077,22.29-18.177,40.341-40.501,40.341c-6.554,0-12.742-1.555-18.222-4.318c7.401,9.707,19.087,15.973,32.241,15.973c22.32,0,40.424-18.049,40.502-40.342V11.655H177.817z M100.694,114.408V103.56c-4.026-0.55-8.085-0.826-12.149-0.824C39.642,102.735,0,142.356,0,191.228c0,30.64,15.58,57.643,39.255,73.527c-15.615-15.953-25.236-37.789-25.236-61.874C14.019,154.632,52.653,115.4,100.694,114.408z"></path>
           </svg>
         </a>
         <a class="nav-social-link" href="https://www.facebook.com/profile.php?id=100004579576807" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg>
         </a>
       </div>
       <div class="lang-switch" id="langSwitch">
         <button type="button" class="lang-current" id="langCurrent" aria-haspopup="listbox" aria-expanded="false">
-          <span id="langCurrentLabel">Ελληνικά</span>
-          <svg class="lang-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="langCurrentLabel">Français</span>
+          <svg class="lang-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </button>
         <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Γλώσσα / Language">
-          <li role="option"><button type="button" class="lang-option is-active" data-lang="el">Ελληνικά</button></li>
+          <li role="option"><button type="button" class="lang-option" data-lang="el">Ελληνικά</button></li>
           <li role="option"><button type="button" class="lang-option" data-lang="en">English</button></li>
           <li role="option"><button type="button" class="lang-option" data-lang="it">Italiano</button></li>
           <li role="option"><button type="button" class="lang-option" data-lang="de">Deutsch</button></li>
-          <li role="option"><button type="button" class="lang-option" data-lang="fr">Français</button></li>
+          <li role="option"><button type="button" class="lang-option is-active" data-lang="fr">Français</button></li>
         </ul>
       </div>
     </div>
   </div>
   <nav class="mobile-menu container" id="mobileMenu" aria-label="Κύρια πλοήγηση (κινητό)">
-    <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
-    <a href="#products" data-i18n="nav.products">ΠΡΟΪΟΝΤΑ</a>
-    <a href="#contact" data-i18n="nav.contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-    <a class="menu-cta" href="../files/testa-catalog.pdf" download data-i18n="nav.catalog">ΚΑΤΕΒΑΣΤΕ ΤΟΝ ΚΑΤΑΛΟΓΟ</a>
+    <a href="#history" data-i18n="nav.history">NOTRE HISTOIRE</a>
+    <a href="#products" data-i18n="nav.products">PRODUITS</a>
+    <a href="#contact" data-i18n="nav.contact">CONTACT</a>
+    <a class="menu-cta" href="../files/testa-catalog.pdf" download="" data-i18n="nav.catalog">TÉLÉCHARGER LE CATALOGUE</a>
     <div class="mobile-social" aria-label="Ακολουθήστε μας στα κοινωνικά δίκτυα">
       <a class="nav-social-link" href="https://www.instagram.com/j.r.testa/" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <defs>
             <radialGradient id="igGrad-mobile" cx="30%" cy="107%" r="150%">
-              <stop offset="0%" stop-color="#fdf497"/>
-              <stop offset="5%" stop-color="#fdf497"/>
-              <stop offset="45%" stop-color="#fd5949"/>
-              <stop offset="60%" stop-color="#d6249f"/>
-              <stop offset="90%" stop-color="#285AEB"/>
+              <stop offset="0%" stop-color="#fdf497"></stop>
+              <stop offset="5%" stop-color="#fdf497"></stop>
+              <stop offset="45%" stop-color="#fd5949"></stop>
+              <stop offset="60%" stop-color="#d6249f"></stop>
+              <stop offset="90%" stop-color="#285AEB"></stop>
             </radialGradient>
           </defs>
-          <path fill="url(#igGrad-mobile)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
+          <path fill="url(#igGrad-mobile)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
         </svg>
       </a>
       <a class="nav-social-link" href="https://www.tiktok.com/@testa.gr" target="_blank" rel="noopener" aria-label="TikTok">
         <svg viewBox="0 0 260 292" aria-hidden="true">
-          <path fill="#FF004F" d="M191.102,105.182c18.814,13.442,41.862,21.351,66.755,21.351V78.656c-4.711,0.001-9.41-0.49-14.019-1.466v37.686c-24.891,0-47.936-7.909-66.755-21.35v97.703c0,48.876-39.642,88.495-88.54,88.495c-18.245,0-35.203-5.513-49.29-14.968c16.078,16.431,38.5,26.624,63.306,26.624c48.901,0,88.545-39.619,88.545-88.497v-97.701H191.102z M208.396,56.88c-9.615-10.499-15.928-24.067-17.294-39.067v-6.158h-13.285C181.161,30.72,192.567,47.008,208.396,56.88L208.396,56.88z M70.181,227.25c-5.372-7.04-8.275-15.652-8.262-24.507c0-22.354,18.132-40.479,40.502-40.479c4.169-0.001,8.313,0.637,12.286,1.897v-48.947c-4.643-0.636-9.329-0.906-14.013-0.807v38.098c-3.976-1.26-8.122-1.9-12.292-1.896c-22.37,0-40.501,18.123-40.501,40.48C47.901,206.897,56.964,220.583,70.181,227.25z"/>
-          <path fill="var(--ink)" d="M177.083,93.525c18.819,13.441,41.864,21.35,66.755,21.35V77.189c-13.894-2.958-26.194-10.215-35.442-20.309c-15.83-9.873-27.235-26.161-30.579-45.225h-34.896v191.226c-0.079,22.293-18.18,40.344-40.502,40.344c-13.154,0-24.84-6.267-32.241-15.975c-13.216-6.667-22.279-20.354-22.279-36.16c0-22.355,18.131-40.48,40.501-40.48c4.286,0,8.417,0.667,12.292,1.896v-38.098c-48.039,0.992-86.674,40.224-86.674,88.474c0,24.086,9.621,45.921,25.236,61.875c14.087,9.454,31.045,14.968,49.29,14.968c48.899,0,88.54-39.621,88.54-88.496V93.525L177.083,93.525z"/>
-          <path fill="#00F2EA" d="M243.838,77.189V66.999c-12.529,0.019-24.812-3.488-35.442-10.12C217.806,67.176,230.197,74.276,243.838,77.189z M177.817,11.655c-0.319-1.822-0.564-3.656-0.734-5.497V0h-48.182v191.228c-0.077,22.29-18.177,40.341-40.501,40.341c-6.554,0-12.742-1.555-18.222-4.318c7.401,9.707,19.087,15.973,32.241,15.973c22.32,0,40.424-18.049,40.502-40.342V11.655H177.817z M100.694,114.408V103.56c-4.026-0.55-8.085-0.826-12.149-0.824C39.642,102.735,0,142.356,0,191.228c0,30.64,15.58,57.643,39.255,73.527c-15.615-15.953-25.236-37.789-25.236-61.874C14.019,154.632,52.653,115.4,100.694,114.408z"/>
+          <path fill="#FF004F" d="M191.102,105.182c18.814,13.442,41.862,21.351,66.755,21.351V78.656c-4.711,0.001-9.41-0.49-14.019-1.466v37.686c-24.891,0-47.936-7.909-66.755-21.35v97.703c0,48.876-39.642,88.495-88.54,88.495c-18.245,0-35.203-5.513-49.29-14.968c16.078,16.431,38.5,26.624,63.306,26.624c48.901,0,88.545-39.619,88.545-88.497v-97.701H191.102z M208.396,56.88c-9.615-10.499-15.928-24.067-17.294-39.067v-6.158h-13.285C181.161,30.72,192.567,47.008,208.396,56.88L208.396,56.88z M70.181,227.25c-5.372-7.04-8.275-15.652-8.262-24.507c0-22.354,18.132-40.479,40.502-40.479c4.169-0.001,8.313,0.637,12.286,1.897v-48.947c-4.643-0.636-9.329-0.906-14.013-0.807v38.098c-3.976-1.26-8.122-1.9-12.292-1.896c-22.37,0-40.501,18.123-40.501,40.48C47.901,206.897,56.964,220.583,70.181,227.25z"></path>
+          <path fill="var(--ink)" d="M177.083,93.525c18.819,13.441,41.864,21.35,66.755,21.35V77.189c-13.894-2.958-26.194-10.215-35.442-20.309c-15.83-9.873-27.235-26.161-30.579-45.225h-34.896v191.226c-0.079,22.293-18.18,40.344-40.502,40.344c-13.154,0-24.84-6.267-32.241-15.975c-13.216-6.667-22.279-20.354-22.279-36.16c0-22.355,18.131-40.48,40.501-40.48c4.286,0,8.417,0.667,12.292,1.896v-38.098c-48.039,0.992-86.674,40.224-86.674,88.474c0,24.086,9.621,45.921,25.236,61.875c14.087,9.454,31.045,14.968,49.29,14.968c48.899,0,88.54-39.621,88.54-88.496V93.525L177.083,93.525z"></path>
+          <path fill="#00F2EA" d="M243.838,77.189V66.999c-12.529,0.019-24.812-3.488-35.442-10.12C217.806,67.176,230.197,74.276,243.838,77.189z M177.817,11.655c-0.319-1.822-0.564-3.656-0.734-5.497V0h-48.182v191.228c-0.077,22.29-18.177,40.341-40.501,40.341c-6.554,0-12.742-1.555-18.222-4.318c7.401,9.707,19.087,15.973,32.241,15.973c22.32,0,40.424-18.049,40.502-40.342V11.655H177.817z M100.694,114.408V103.56c-4.026-0.55-8.085-0.826-12.149-0.824C39.642,102.735,0,142.356,0,191.228c0,30.64,15.58,57.643,39.255,73.527c-15.615-15.953-25.236-37.789-25.236-61.874C14.019,154.632,52.653,115.4,100.694,114.408z"></path>
         </svg>
       </a>
       <a class="nav-social-link" href="https://www.facebook.com/profile.php?id=100004579576807" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg>
       </a>
     </div>
   </nav>
@@ -539,17 +551,17 @@
   <section class="hero" id="hero">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow" data-i18n="hero.eyebrow">ΒΙΟΤΕΧΝΙΑ ΚΛΕΙΔΑΡΙΩΝ &amp; ΚΥΛΙΝΔΡΩΝ ΑΣΦΑΛΕΙΑΣ</p>
-        <h1 data-i18n-html="hero.h1">Ασφάλεια που<br>κρατά, <em>από το 1953.</em></h1>
-        <p class="hero-lede" data-i18n="hero.lede">Η TESTA σχεδιάζει και κατασκευάζει κλειδαριές, κυλίνδρους και κλειδιά ασφαλείας στο εργοστάσιό μας στην Αθήνα, με την ίδια επιμονή στην ποιότητα από την πρώτη μέρα, εδώ και πάνω από επτά δεκαετίες.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">ATELIER DE SERRURES ET CYLINDRES</p>
+        <h1 data-i18n-html="hero.h1">Une sécurité<br>durable, <em>depuis 1953.</em></h1>
+        <p class="hero-lede" data-i18n="hero.lede">TESTA conçoit et fabrique des serrures, cylindres et clés de sécurité dans notre usine d'Athènes, avec la même exigence de qualité depuis le premier jour, depuis plus de soixante-dix ans.</p>
         <div class="hero-ctas">
-          <a href="#products" class="btn btn-primary" data-i18n="hero.cta1">ΔΕΙΤΕ ΤΑ ΠΡΟΪΟΝΤΑ</a>
-          <a href="#history" class="btn btn-ghost" data-i18n="hero.cta2">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
+          <a href="#products" class="btn btn-primary" data-i18n="hero.cta1">VOIR LES PRODUITS</a>
+          <a href="#history" class="btn btn-ghost" data-i18n="hero.cta2">NOTRE HISTOIRE</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><b>1953</b><span data-i18n="hero.stat1">ΕΤΟΣ ΙΔΡΥΣΗΣ</span></div>
+          <div class="stat"><b>1953</b><span data-i18n="hero.stat1">FONDÉE EN</span></div>
           <div class="stat"><b>100%</b><span>Made in Greece</span></div>
-          <div class="stat"><b>5</b><span data-i18n="hero.stat2">χρόνια εγγύηση</span></div>
+          <div class="stat"><b>5</b><span data-i18n="hero.stat2">ans de garantie</span></div>
         </div>
       </div>
       <div class="hero-art">
@@ -557,8 +569,8 @@
           <img src="../images/hero-1953.webp" loading="eager" alt="Ιστορική φωτογραφία TESTA, από το 1953">
         </div>
         <div class="hero-tag">
-          <b data-i18n="hero.tagb">Ελληνική κατασκευή</b>
-          <span data-i18n="hero.tags">Σχεδιασμός. Κατεργασία και Συναρμολόγηση στο εργοστάσιό μας στον Βοτανικό.</span>
+          <b data-i18n="hero.tagb">Fabrication grecque</b>
+          <span data-i18n="hero.tags">Conçu, usiné et assemblé dans notre usine de Votanikos.</span>
         </div>
       </div>
     </div>
@@ -568,32 +580,32 @@
   <section id="history" class="alt">
     <div class="container history-wrap">
       <div class="reveal">
-        <p class="eyebrow" data-i18n="hist.eyebrow">Η ΙΣΤΟΡΙΑ ΜΑΣ</p>
-        <h2 data-i18n="hist.h2">Επτά δεκαετίες σε κάθε κλειδαριά.</h2>
+        <p class="eyebrow" data-i18n="hist.eyebrow">NOTRE HISTOIRE</p>
+        <h2 data-i18n="hist.h2">Sept décennies dans chaque serrure.</h2>
         <ul class="timeline">
           <li class="reveal">
             <span class="yr">1953</span>
-            <h4 data-i18n="hist.t1title">Η ίδρυση</h4>
-            <p data-i18n="hist.t1desc">Ο Νίκος Ρουμελιώτης, μαζί με τα δύο αδέρφια του, τον Γρηγόρη και τον Φώτη, ιδρύουν την επιχείρηση στην Αθήνα, κατασκευάζοντας σιδηρικά, απλές κλειδαριές και κλειδιά για τις ανάγκες της εποχής. Η ποιότητα κατασκευής κερδίζει γρήγορα πελατεία σε όλη την Ελλάδα.</p>
+            <h4 data-i18n="hist.t1title">La Fondation</h4>
+            <p data-i18n="hist.t1desc">Nikos Roumeliotis fonde l'entreprise à Athènes avec ses deux frères, Grigoris et Fotis, fabriquant de la quincaillerie, des serrures simples et des clés pour les besoins de l'époque. La qualité de fabrication conquiert rapidement des clients dans toute la Grèce.</p>
           </li>
           <li class="reveal">
             <span class="yr">2011</span>
-            <h4 data-i18n="hist.t2title">Εξαγορά της DELCA</h4>
-            <p data-i18n="hist.t2desc">Η TESTA εξαγοράζει την ελληνική βιοτεχνία κυλίνδρων DELCA, διευρύνοντας τη γκάμα προϊόντων της διατηρώντας την παραγωγή αποκλειστικά στην Ελλάδα.</p>
+            <h4 data-i18n="hist.t2title">Acquisition de DELCA</h4>
+            <p data-i18n="hist.t2desc">TESTA acquiert le fabricant grec de cylindres DELCA, élargissant sa gamme de produits tout en maintenant une production exclusivement en Grèce.</p>
           </li>
           <li class="reveal">
-            <span class="yr" data-i18n="hist.t3yr">Σήμερα</span>
+            <span class="yr" data-i18n="hist.t3yr">Aujourd'hui</span>
             <h4>Ι. Ρουμελιώτης &amp; Σια Ο.Ε</h4>
-            <p data-i18n="hist.t3desc">Η επιχείρηση συνεχίζει, με ίδια κεφάλαια, να σχεδιάζει και να κατασκευάζει κλειδαριές, κυλίνδρους, αντικρύσματα και κλειδιά, 100% στο εργοστάσιό μας στην Αθήνα.</p>
+            <p data-i18n="hist.t3desc">L'entreprise continue, avec ses propres capitaux, à concevoir et fabriquer serrures, cylindres, gâches et clés, à 100&amp;nbsp;% dans notre usine d'Athènes.</p>
           </li>
         </ul>
       </div>
       <div class="history-copy reveal">
-        <p class="lede" data-i18n="hist.lede">«Από το 1953 πιστεύουμε πως η ασφάλεια ενός σπιτιού ξεκινά από την ποιότητα ενός μικρού μηχανισμού, φτιαγμένου με προσοχή.»</p>
-        <p data-i18n="hist.p1">Η TESTA (Ι. Ρουμελιώτης &amp; Σια Ο.Ε) είναι μία από τις παλαιότερες ελληνικές βιοτεχνίες κλειδαριών και κυλίνδρων ασφαλείας, με συνεχή παρουσία στην αγορά από το 1953. Από το εργοστάσιό μας στην Αθήνα, σχεδιάζουμε και κατασκευάζουμε προϊόντα για πόρτες αλουμινίου, σιδήρου και ξύλου, συνδυάζοντας παραδοσιακή τεχνογνωσία με σύγχρονες προδιαγραφές αντοχής.</p>
-        <p data-i18n="hist.p2">Η φιλοσοφία μας παραμένει σταθερή: προϊόντα 100% ελληνικής κατασκευής, σχεδιασμένα να αντέχουν στον χρόνο, με έμφαση στην αξιοπιστία και στην εξυπηρέτηση μετά την πώληση. Προσαρμοζόμαστε διαρκώς στις ανάγκες μιας αγοράς που αλλάζει, χωρίς να χάνουμε τις ρίζες μας, και τη δέσμευσή μας απέναντι στους ανθρώπους και τους συνεργάτες μας.</p>
+        <p class="lede" data-i18n="hist.lede">« Depuis 1953, nous croyons que la sécurité d'une maison commence par la qualité d'un petit mécanisme, fabriqué avec soin. »</p>
+        <p data-i18n="hist.p1">TESTA (Ι. Roumeliotis &amp; Sia Ο.Ε) est l'une des plus anciennes usines grecques de serrures et cylindres de sécurité, présente sur le marché de façon continue depuis 1953. Depuis notre usine d'Athènes, nous concevons et fabriquons des produits pour portes en aluminium, en fer et en bois, alliant savoir-faire traditionnel et normes de résistance modernes.</p>
+        <p data-i18n="hist.p2">Notre philosophie reste constante&amp;nbsp;: des produits 100&amp;nbsp;% fabriqués en Grèce, conçus pour durer, avec un accent sur la fiabilité et le service après-vente. Nous nous adaptons sans cesse aux besoins d'un marché en mutation, sans perdre nos racines, ni notre engagement envers nos collaborateurs et partenaires.</p>
         <p class="signature">
-          <span data-i18n="hist.sig">Οικογένεια Ρουμελιώτη</span>
+          <span data-i18n="hist.sig">La Famille Roumeliotis</span>
           <img class="sig-img" src="../images/signature.webp" loading="lazy" alt="Υπογραφή οικογένειας Ρουμελιώτη">
         </p>
       </div>
@@ -604,47 +616,53 @@
   <section id="products">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="prod.eyebrow">ΠΡΟΪΟΝΤΑ</p>
-        <h2 data-i18n="prod.h2">Κλειδαριές, κύλινδροι &amp; κλειδιά για κάθε πόρτα.</h2>
-        <p data-i18n="prod.intro">Κατασκευάζουμε πλήρεις σειρές μηχανισμών ασφαλείας για πόρτες αλουμινίου, σιδήρου και ξύλου, από τον κύλινδρο μέχρι το τελευταίο κλειδί.</p>
+        <p class="eyebrow" data-i18n="prod.eyebrow">PRODUITS</p>
+        <h2 data-i18n="prod.h2">Serrures, cylindres et clés pour chaque porte.</h2>
+        <p data-i18n="prod.intro">Nous fabriquons des gammes complètes de mécanismes de sécurité pour portes en aluminium, en fer et en bois, du cylindre jusqu'à la dernière clé.</p>
       </div>
+
+      <div class="prod-search reveal">
+        <svg class="prod-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+        <input type="search" id="prodSearch" data-i18n-placeholder="prod.searchPlaceholder" placeholder="Rechercher par code ou mot-clé..." autocomplete="off">
+      </div>
+      <p class="prod-search-empty" id="prodSearchEmpty" data-i18n="prod.searchEmpty" hidden="">Aucun produit trouvé.</p>
 
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat1.h">Κλειδαριές για Πόρτες Αλουμινίου</h3>
-            <p class="cat-desc" data-i18n="cat1.d">Στενές και γλωσσάτες ασφάλειες Testa &amp; Primo για πόρτες αλουμινίου, με ή χωρίς κύλινδρο.</p>
+            <h3 data-i18n="cat1.h">Serrures pour Portes en Aluminium</h3>
+            <p class="cat-desc" data-i18n="cat1.d">Serrures étroites et à mentonnet Testa &amp; Primo pour portes en aluminium, avec ou sans cylindre.</p>
           </div>
-          <span class="cat-num" data-i18n="cat1.num">01. Αλουμίνιο</span>
+          <span class="cat-num" data-i18n="cat1.num">01. Aluminium</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: χρώμιο|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: chrome|Cylinder: 54mm|Pack: 48 pcs." data-spec-it="Interasse 20mm per porte in ferro e alluminio|Cambio facile della direzione della linguetta superiore, destra o sinistra|Finitura serratura: cromo|Cilindro: 54mm|Confezione: 48 pz." data-spec-de="20mm Dornmaß für Eisen- und Aluminiumtüren|Einfacher Wechsel der Riegelrichtung oben, rechts oder links|Schlossausführung: Chrom|Zylinder: 54mm|Packung: 48 Stk." data-spec-fr="Entraxe 20mm pour portes en fer et en aluminium|Changement facile du sens du pêne haut, droite ou gauche|Finition de la serrure : chrome|Cylindre : 54mm|Emballage : 48 pièces">
             <div class="prod-photo"><img src="../images/product-01.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Testa"></div>
-            <div class="prod-info"><span class="prod-code">1410-20</span><h4 data-i18n="p1t">Στενή ασφ. 20άρα Testa</h4><p data-i18n="p1d">Χρώμιο, με κύλινδρο 54χιλ.</p></div>
+            <div class="prod-info"><span class="prod-code">1410-20</span><h4 data-i18n="p1t">Serrure Étroite Testa 20mm</h4><p data-i18n="p1d">Chromée, avec cylindre de 54mm.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Cylinder: 54mm|Pack: 48 pcs." data-spec-it="Interasse 20mm per porte in ferro e alluminio|Cambio facile della direzione della linguetta superiore, destra o sinistra|Finitura serratura: zincata|Cilindro: 54mm|Confezione: 48 pz." data-spec-de="20mm Dornmaß für Eisen- und Aluminiumtüren|Einfacher Wechsel der Riegelrichtung oben, rechts oder links|Schlossausführung: verzinkt|Zylinder: 54mm|Packung: 48 Stk." data-spec-fr="Entraxe 20mm pour portes en fer et en aluminium|Changement facile du sens du pêne haut, droite ou gauche|Finition de la serrure : galvanisée|Cylindre : 54mm|Emballage : 48 pièces">
             <div class="prod-photo"><img src="../images/product-02.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo με κύλινδρο"></div>
-            <div class="prod-info"><span class="prod-code">1460-20</span><h4 data-i18n="p2t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p2d">Με κύλινδρο 54χιλ., ορείχαλκος.</p></div>
+            <div class="prod-info"><span class="prod-code">1460-20</span><h4 data-i18n="p2t">Serrure Étroite Primo 20mm</h4><p data-i18n="p2d">Avec cylindre de 54mm, laiton.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Χωρίς κύλινδρο|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Without cylinder|Pack: 48 pcs." data-spec-it="Interasse 20mm per porte in ferro e alluminio|Cambio facile della direzione della linguetta superiore, destra o sinistra|Finitura serratura: zincata|Senza cilindro|Confezione: 48 pz." data-spec-de="20mm Dornmaß für Eisen- und Aluminiumtüren|Einfacher Wechsel der Riegelrichtung oben, rechts oder links|Schlossausführung: verzinkt|Ohne Zylinder|Packung: 48 Stk." data-spec-fr="Entraxe 20mm pour portes en fer et en aluminium|Changement facile du sens du pêne haut, droite ou gauche|Finition de la serrure : galvanisée|Sans cylindre|Emballage : 48 pièces">
             <div class="prod-photo"><img src="../images/product-03.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo χωρίς κύλινδρο"></div>
-            <div class="prod-info"><span class="prod-code">1460-20 Χ/Κ</span><h4 data-i18n="p3t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p3d">Χωρίς κύλινδρο.</p></div>
+            <div class="prod-info"><span class="prod-code">1460-20 Χ/Κ</span><h4 data-i18n="p3t">Serrure Étroite Primo 20mm</h4><p data-i18n="p3d">Sans cylindre.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κλειδιά: (2) χρωμιωμένα|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Keys: (2) chrome-plated|Pack: 48 pcs." data-spec-it="Interasse 20mm per porte in ferro e alluminio|Cambio facile della direzione della linguetta superiore, destra o sinistra|Finitura serratura: zincata|Chiavi: (2) cromate|Confezione: 48 pz." data-spec-de="20mm Dornmaß für Eisen- und Aluminiumtüren|Einfacher Wechsel der Riegelrichtung oben, rechts oder links|Schlossausführung: verzinkt|Schlüssel: (2) verchromt|Packung: 48 Stk." data-spec-fr="Entraxe 20mm pour portes en fer et en aluminium|Changement facile du sens du pêne haut, droite ou gauche|Finition de la serrure : galvanisée|Clés : (2) chromées|Emballage : 48 pièces">
             <div class="prod-photo"><img src="../images/product-04.webp" loading="lazy" alt="Στενή ασφάλεια Νο 20x8 Testa με μεγάλο κλειδί"></div>
-            <div class="prod-info"><span class="prod-code">1480-20</span><h4 data-i18n="p4t">Στενή Νο 20x8 Testa</h4><p data-i18n="p4d">Με μεγάλο κλειδί.</p></div>
+            <div class="prod-info"><span class="prod-code">1480-20</span><h4 data-i18n="p4t">Testa Étroite N° 20x8</h4><p data-i18n="p4d">Avec grande clé.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-05.webp" loading="lazy" alt="Γλωσσάτη ασφάλεια 25άρα Testa"></div>
-            <div class="prod-info"><span class="prod-code">1510-25</span><h4 data-i18n="p5t">Γλωσσάτη ασφ. 25άρα Testa</h4><p data-i18n="p5d">Χρώμιο, χωρίς κύλινδρο.</p></div>
+            <div class="prod-info"><span class="prod-code">1510-25</span><h4 data-i18n="p5t">Serrure à Mentonnet Testa 25mm</h4><p data-i18n="p5d">Chromée, sans cylindre.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-06.webp" loading="lazy" alt="Γλωσσάτη ασφάλεια 30άρα Testa"></div>
-            <div class="prod-info"><span class="prod-code">1510-30</span><h4 data-i18n="p6t">Γλωσσάτη ασφ. 30άρα Testa</h4><p data-i18n="p6d">Χρώμιο, χωρίς κύλινδρο.</p></div>
+            <div class="prod-info"><span class="prod-code">1510-30</span><h4 data-i18n="p6t">Serrure à Mentonnet Testa 30mm</h4><p data-i18n="p6d">Chromée, sans cylindre.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-07.webp" loading="lazy" alt="Γλωσσάτη ασφάλεια 35άρα Testa"></div>
-            <div class="prod-info"><span class="prod-code">1510-35</span><h4 data-i18n="p7t">Γλωσσάτη ασφ. 35άρα Testa</h4><p data-i18n="p7d">Χρώμιο, χωρίς κύλινδρο.</p></div>
+            <div class="prod-info"><span class="prod-code">1510-35</span><h4 data-i18n="p7t">Serrure à Mentonnet Testa 35mm</h4><p data-i18n="p7d">Chromée, sans cylindre.</p></div>
           </article>
         </div>
       </div>
@@ -652,35 +670,35 @@
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat2.h">Κλειδαριές για Πόρτες Σιδήρου και Ξύλου</h3>
-            <p class="cat-desc" data-i18n="cat2.d">Κουτιαστές ασφάλειες και τραβηχτές, δεξιές ή αριστερές, με ή χωρίς αντίκρισμα.</p>
+            <h3 data-i18n="cat2.h">Serrures pour Portes en Fer et Bois</h3>
+            <p class="cat-desc" data-i18n="cat2.d">Serrures à mortaiser et à tirage, droites ou gauches, avec ou sans gâche.</p>
           </div>
-          <span class="cat-num" data-i18n="cat2.num">02. Σιδήρου/Ξύλου</span>
+          <span class="cat-num" data-i18n="cat2.num">02. Fer/Bois</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card" data-spec-el="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Ειδικά επιμεταλλωμένα εξαρτήματα για αντοχή στη διάβρωση|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 50mm|With security cylinder, for metal and wooden doors|With (3) keys|Finish: electrostatic paint, black|Special plated components for corrosion resistance|Available right (R) or left (L)|Pack: 36 pcs." data-spec-it="Interasse: 50mm|Con cilindro di sicurezza, per porte metalliche e in legno|Con (3) chiavi|Finitura: verniciatura elettrostatica, colore nero|Componenti speciali placcati per la resistenza alla corrosione|Disponibile destra (D) o sinistra (S)|Confezione: 36 pz." data-spec-de="Dornmaß: 50mm|Mit Sicherheitszylinder, für Metall- und Holztüren|Mit (3) Schlüsseln|Ausführung: elektrostatisch lackiert, schwarz|Speziell beschichtete Bauteile für Korrosionsschutz|Erhältlich rechts (R) oder links (L)|Packung: 36 Stk." data-spec-fr="Entraxe : 50mm|Avec cylindre de sécurité, pour portes métalliques et en bois|Avec (3) clés|Finition : peinture électrostatique, noire|Composants spéciaux plaqués pour la résistance à la corrosion|Disponible en droite (D) ou gauche (G)|Emballage : 36 pièces">
             <div class="prod-photo"><img src="../images/product-08.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα"></div>
-            <div class="prod-info"><span class="prod-code">35100</span><h4 data-i18n="p8t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p8d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">35100</span><h4 data-i18n="p8t">Serrure à Mortaiser 50mm</h4><p data-i18n="p8d">Droite ou gauche, sans gâche.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Περιέχει αντίκρισμα|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 50mm|With security cylinder, for metal and wooden doors|With (3) keys|Finish: electrostatic paint, black|Includes strike plate|Available right (R) or left (L)|Pack: 36 pcs." data-spec-it="Interasse: 50mm|Con cilindro di sicurezza, per porte metalliche e in legno|Con (3) chiavi|Finitura: verniciatura elettrostatica, colore nero|Include contropiastra|Disponibile destra (D) o sinistra (S)|Confezione: 36 pz." data-spec-de="Dornmaß: 50mm|Mit Sicherheitszylinder, für Metall- und Holztüren|Mit (3) Schlüsseln|Ausführung: elektrostatisch lackiert, schwarz|Inklusive Schließblech|Erhältlich rechts (R) oder links (L)|Packung: 36 Stk." data-spec-fr="Entraxe : 50mm|Avec cylindre de sécurité, pour portes métalliques et en bois|Avec (3) clés|Finition : peinture électrostatique, noire|Gâche incluse|Disponible en droite (D) ou gauche (G)|Emballage : 36 pièces">
             <div class="prod-photo"><img src="../images/product-09.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα με αντίκρισμα"></div>
-            <div class="prod-info"><span class="prod-code">35100 S</span><h4 data-i18n="p9t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p9d">Δεξιά ή αριστερή, με αντίκρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">35100 S</span><h4 data-i18n="p9t">Serrure à Mortaiser 50mm</h4><p data-i18n="p9d">Droite ou gauche, avec gâche.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρο: 55mm|Με κύλινδρο ασφαλείας, για μεταλλικές πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 55mm|With security cylinder, for metal doors|With (3) keys|Finish: electrostatic paint, black|Available right (R) or left (L)|Pack: 36 pcs." data-spec-it="Interasse: 55mm|Con cilindro di sicurezza, per porte metalliche|Con (3) chiavi|Finitura: verniciatura elettrostatica, colore nero|Disponibile destra (D) o sinistra (S)|Confezione: 36 pz." data-spec-de="Dornmaß: 55mm|Mit Sicherheitszylinder, für Metalltüren|Mit (3) Schlüsseln|Ausführung: elektrostatisch lackiert, schwarz|Erhältlich rechts (R) oder links (L)|Packung: 36 Stk." data-spec-fr="Entraxe : 55mm|Avec cylindre de sécurité, pour portes métalliques|Avec (3) clés|Finition : peinture électrostatique, noire|Disponible en droite (D) ou gauche (G)|Emballage : 36 pièces">
             <div class="prod-photo"><img src="../images/product-10.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 55άρα"></div>
-            <div class="prod-info"><span class="prod-code">55100</span><h4 data-i18n="p10t">Κουτιαστή ασφάλεια 55άρα</h4><p data-i18n="p10d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">55100</span><h4 data-i18n="p10t">Serrure à Mortaiser 55mm</h4><p data-i18n="p10d">Droite ou gauche, sans gâche.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-11.webp" loading="lazy" alt="Κουτιαστή τραβηχτή 50άρα χωρίς αντίκρισμα"></div>
-            <div class="prod-info"><span class="prod-code">36100</span><h4 data-i18n="p11t">Κουτιαστή τραβηχτή 50άρα</h4><p data-i18n="p11d">Με μεγάλο κλειδί, Δ/Α, χωρίς αντίκρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">36100</span><h4 data-i18n="p11t">Serrure à Mortaiser à Tirage 50mm</h4><p data-i18n="p11d">Avec grande clé, D/G, sans gâche.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-12.webp" loading="lazy" alt="Κουτιαστή τραβηχτή 50άρα με αντίκρισμα"></div>
-            <div class="prod-info"><span class="prod-code">36100 S</span><h4 data-i18n="p12t">Κουτιαστή τραβηχτή 50άρα</h4><p data-i18n="p12d">Με μεγάλο κλειδί, Δ/Α, με αντίκρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">36100 S</span><h4 data-i18n="p12t">Serrure à Mortaiser à Tirage 50mm</h4><p data-i18n="p12d">Avec grande clé, D/G, avec gâche.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Για κλειδαριές κουτιαστές, ασφαλείας και απλές|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξί (Δ) και αριστερό (Α)|Συσκευασία: 10 τεμ." data-spec-en="For mortise, security and simple locks|Finish: electrostatic paint, black|Available right (R) or left (L)|Pack: 10 pcs." data-spec-it="Per serrature da incasso, di sicurezza e semplici|Finitura: verniciatura elettrostatica, colore nero|Disponibile destra (D) o sinistra (S)|Confezione: 10 pz." data-spec-de="Für Einsteck-, Sicherheits- und einfache Schlösser|Ausführung: elektrostatisch lackiert, schwarz|Erhältlich rechts (R) oder links (L)|Packung: 10 Stk." data-spec-fr="Pour serrures encastrées, de sécurité et simples|Finition : peinture électrostatique, noire|Disponible en droite (D) ou gauche (G)|Emballage : 10 pièces">
             <div class="prod-photo"><img src="../images/product-13.webp" loading="lazy" alt="Αντίκρισμα για κλειδαριές κουτιαστές"></div>
-            <div class="prod-info"><span class="prod-code">36120</span><h4 data-i18n="p13t">Αντίκρισμα κουτιαστής</h4><p data-i18n="p13d">Για κλειδαριές κουτιαστές, Δ/Α.</p></div>
+            <div class="prod-info"><span class="prod-code">36120</span><h4 data-i18n="p13t">Gâche pour Serrure à Mortaiser</h4><p data-i18n="p13d">Pour serrures à mortaiser, D/G.</p></div>
           </article>
         </div>
       </div>
@@ -688,35 +706,35 @@
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat3.h">Κλειδαριές για Πόρτες Ξύλου</h3>
-            <p class="cat-desc" data-i18n="cat3.d">Μεσόπορτες Testa &amp; Primo και κλειδαρίτσες επίπλων, σε πολλά κέντρα.</p>
+            <h3 data-i18n="cat3.h">Serrures pour Portes en Bois</h3>
+            <p class="cat-desc" data-i18n="cat3.d">Serrures de porte intérieure Testa &amp; Primo et serrures de meuble, en plusieurs entraxes.</p>
           </div>
-          <span class="cat-num" data-i18n="cat3.num">03. Ξύλου</span>
+          <span class="cat-num" data-i18n="cat3.num">03. Bois</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card" data-spec-el="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά επιχρυσωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: ορειχάλκωση|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|For wooden interior doors|With (2) gold-plated keys, in 6 different combinations|Finish: brass-plated|Includes strike plate and screws|Pack: 39 pcs." data-spec-it="Interasse: 40x75|Per porte interne in legno|Con (2) chiavi dorate, in 6 combinazioni diverse|Finitura: placcata ottone|Include contropiastra e viti|Confezione: 39 pz." data-spec-de="Dornmaß: 40x75|Für hölzerne Innentüren|Mit (2) goldfarbenen Schlüsseln, in 6 verschiedenen Kombinationen|Ausführung: messingbeschichtet|Inklusive Schließblech und Schrauben|Packung: 39 Stk." data-spec-fr="Entraxe : 40x75|Pour portes intérieures en bois|Avec (2) clés dorées, en 6 combinaisons différentes|Finition : plaquée laiton|Gâche et vis incluses|Emballage : 39 pièces">
             <div class="prod-photo"><img src="../images/product-14.webp" loading="lazy" alt="Μεσόπορτας Testa κίτρινη"></div>
-            <div class="prod-info"><span class="prod-code">2010-40</span><h4 data-i18n="p14t">Μεσόπορτας Testa</h4><p data-i18n="p14d">Κίτρινη, κέντρα 40-75.</p></div>
+            <div class="prod-info"><span class="prod-code">2010-40</span><h4 data-i18n="p14t">Serrure de Porte Intérieure Testa</h4><p data-i18n="p14d">Jaune, entraxe 40-75.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά χρωμιωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: χρώμιο|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|For wooden interior doors|With (2) chrome-plated keys, in 6 different combinations|Finish: chrome|Includes strike plate and screws|Pack: 39 pcs." data-spec-it="Interasse: 40x75|Per porte interne in legno|Con (2) chiavi cromate, in 6 combinazioni diverse|Finitura: cromo|Include contropiastra e viti|Confezione: 39 pz." data-spec-de="Dornmaß: 40x75|Für hölzerne Innentüren|Mit (2) verchromten Schlüsseln, in 6 verschiedenen Kombinationen|Ausführung: Chrom|Inklusive Schließblech und Schrauben|Packung: 39 Stk." data-spec-fr="Entraxe : 40x75|Pour portes intérieures en bois|Avec (2) clés chromées, en 6 combinaisons différentes|Finition : chrome|Gâche et vis incluses|Emballage : 39 pièces">
             <div class="prod-photo"><img src="../images/product-15.webp" loading="lazy" alt="Μεσόπορτας Testa χρώμιο"></div>
-            <div class="prod-info"><span class="prod-code">2030-40</span><h4 data-i18n="p15t">Μεσόπορτας Testa</h4><p data-i18n="p15d">Χρώμιο, κέντρα 40-75.</p></div>
+            <div class="prod-info"><span class="prod-code">2030-40</span><h4 data-i18n="p15t">Serrure de Porte Intérieure Testa</h4><p data-i18n="p15d">Chromée, entraxe 40-75.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κέντρα: 40x75|Κλειδαριά Primo για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά ορειχαλκωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: πρόσοψη και αντίκρισμα βαμμένα ηλεκτροστατικά με χρυσό|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|Primo lock for wooden interior doors|With (2) brass-plated keys, in 6 different combinations|Finish: front plate and strike plate electrostatically painted gold|Includes strike plate and screws|Pack: 39 pcs." data-spec-it="Interasse: 40x75|Serratura Primo per porte interne in legno|Con (2) chiavi ottonate, in 6 combinazioni diverse|Finitura: placca frontale e contropiastra verniciate elettrostaticamente color oro|Include contropiastra e viti|Confezione: 39 pz." data-spec-de="Dornmaß: 40x75|Primo-Schloss für hölzerne Innentüren|Mit (2) messingfarbenen Schlüsseln, in 6 verschiedenen Kombinationen|Ausführung: Frontplatte und Schließblech elektrostatisch goldfarben lackiert|Inklusive Schließblech und Schrauben|Packung: 39 Stk." data-spec-fr="Entraxe : 40x75|Serrure Primo pour portes intérieures en bois|Avec (2) clés laitonnées, en 6 combinaisons différentes|Finition : plaque frontale et gâche peintes électrostatiquement en doré|Gâche et vis incluses|Emballage : 39 pièces">
             <div class="prod-photo"><img src="../images/product-16.webp" loading="lazy" alt="Μεσόπορτας Primo βαμμένη χρυσή"></div>
-            <div class="prod-info"><span class="prod-code">2040-40</span><h4 data-i18n="p16t">Μεσόπορτας Primo</h4><p data-i18n="p16d">Βαμμένη χρυσή, κέντρα 40-75.</p></div>
+            <div class="prod-info"><span class="prod-code">2040-40</span><h4 data-i18n="p16t">Serrure de Porte Intérieure Primo</h4><p data-i18n="p16d">Dorée, entraxe 40-75.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-17.webp" loading="lazy" alt="Κλειδαρίτσα κουτιαστή επίπλων"></div>
-            <div class="prod-info"><span class="prod-code">20850</span><h4 data-i18n="p17t">Κλειδαρίτσα επίπλων</h4><p data-i18n="p17d">Κουτιαστή, κέντρο 20/25/30, σε 12άδες.</p></div>
+            <div class="prod-info"><span class="prod-code">20850</span><h4 data-i18n="p17t">Serrure de Meuble</h4><p data-i18n="p17d">À mortaiser, entraxe 20/25/30, boîte de 12.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-18.webp" loading="lazy" alt="Μεσόπορτας ξύλου 2110-40"></div>
-            <div class="prod-info"><span class="prod-code">2110-40</span><h4 data-i18n="p18t">Μεσόπορτας ξύλου</h4><p data-i18n="p18d">Σειρά Testa για ξύλινες πόρτες.</p></div>
+            <div class="prod-info"><span class="prod-code">2110-40</span><h4 data-i18n="p18t">Serrure de Porte Intérieure Bois</h4><p data-i18n="p18d">Gamme Testa pour portes en bois.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-19.webp" loading="lazy" alt="Μεσόπορτας ξύλου 2130-40"></div>
-            <div class="prod-info"><span class="prod-code">2130-40</span><h4 data-i18n="p19t">Μεσόπορτας ξύλου</h4><p data-i18n="p19d">Σειρά Testa για ξύλινες πόρτες.</p></div>
+            <div class="prod-info"><span class="prod-code">2130-40</span><h4 data-i18n="p19t">Serrure de Porte Intérieure Bois</h4><p data-i18n="p19d">Gamme Testa pour portes en bois.</p></div>
           </article>
         </div>
       </div>
@@ -724,15 +742,15 @@
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat4.h">Κύλινδροι Απλοί</h3>
-            <p class="cat-desc" data-i18n="cat4.d">Απλοί, μισοί και κύλινδροι με πόμολο, σε επιμεταλλωμένα και χρυσά φινιρίσματα.</p>
+            <h3 data-i18n="cat4.h">Cylindres Simples</h3>
+            <p class="cat-desc" data-i18n="cat4.d">Cylindres simples, en finition plaquée.</p>
           </div>
-          <span class="cat-num" data-i18n="cat4.num">04. Κύλινδροι</span>
+          <span class="cat-num" data-i18n="cat4.num">04. Cylindres</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-20.webp" loading="lazy" alt="Απλός κύλινδρος ασφαλείας"></div>
-            <div class="prod-info"><span class="prod-code">015</span><h4 data-i18n="p20t">Κύλινδρος απλός</h4><p data-i18n="p20d">Επιμεταλλωμένο φινίρισμα.</p></div>
+            <div class="prod-info"><span class="prod-code">015</span><h4 data-i18n="p20t">Cylindre Simple</h4><p data-i18n="p20d">Finition plaquée.</p></div>
           </article>
         </div>
       </div>
@@ -740,39 +758,39 @@
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat5.h">Κλειδιά</h3>
-            <p class="cat-desc" data-i18n="cat5.d">Κλειδιά επίπλων, τραβηχτής και μεσόπορτας, σε πολλαπλούς συνδυασμούς και φινιρίσματα.</p>
+            <h3 data-i18n="cat5.h">Clés</h3>
+            <p class="cat-desc" data-i18n="cat5.d">Clés de meuble, de tirage et de porte intérieure, en plusieurs combinaisons et finitions.</p>
           </div>
-          <span class="cat-num" data-i18n="cat5.num">05. Κλειδιά</span>
+          <span class="cat-num" data-i18n="cat5.num">05. Clés</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card" data-spec-el="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 4 διαφορετικούς συνδυασμούς" data-spec-en="Finish: galvanized|Available in 4 different combinations" data-spec-it="Finitura: zincata|Disponibile in 4 combinazioni diverse" data-spec-de="Ausführung: verzinkt|Erhältlich in 4 verschiedenen Kombinationen" data-spec-fr="Finition : galvanisée|Disponible en 4 combinaisons différentes">
             <div class="prod-photo"><img src="../images/product-24.webp" loading="lazy" alt="Κλειδί επίπλων γαλβανιζέ"></div>
-            <div class="prod-info"><span class="prod-code">82010</span><h4 data-i18n="p24t">Κλειδί επίπλων</h4><p data-i18n="p24d">Γαλβανιζέ, σε 4 συνδυασμούς.</p></div>
+            <div class="prod-info"><span class="prod-code">82010</span><h4 data-i18n="p24t">Clé de Meuble</h4><p data-i18n="p24d">Galvanisée, en 4 combinaisons.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: galvanized|Available in 6 different combinations" data-spec-it="Finitura: zincata|Disponibile in 6 combinazioni diverse" data-spec-de="Ausführung: verzinkt|Erhältlich in 6 verschiedenen Kombinationen" data-spec-fr="Finition : galvanisée|Disponible en 6 combinaisons différentes">
             <div class="prod-photo"><img src="../images/product-25.webp" loading="lazy" alt="Κλειδί τραβηχτής γαλβανιζέ"></div>
-            <div class="prod-info"><span class="prod-code">82030</span><h4 data-i18n="p25t">Κλειδί τραβηχτής</h4><p data-i18n="p25d">Γαλβανιζέ, σε 6 συνδυασμούς.</p></div>
+            <div class="prod-info"><span class="prod-code">82030</span><h4 data-i18n="p25t">Clé de Tirage</h4><p data-i18n="p25d">Galvanisée, en 6 combinaisons.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Φινίρισμα: ορειχαλκωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: brass-plated|Available in 6 different combinations" data-spec-it="Finitura: placcata ottone|Disponibile in 6 combinazioni diverse" data-spec-de="Ausführung: messingbeschichtet|Erhältlich in 6 verschiedenen Kombinationen" data-spec-fr="Finition : plaquée laiton|Disponible en 6 combinaisons différentes">
             <div class="prod-photo"><img src="../images/product-26.webp" loading="lazy" alt="Κλειδί μεσόπορτας κίτρινο ορειχαλκωμένο"></div>
-            <div class="prod-info"><span class="prod-code">82050</span><h4 data-i18n="p26t">Κλειδί μεσόπορτας</h4><p data-i18n="p26d">Κίτρινο ορειχαλκωμένο, σε 6 συνδυασμούς.</p></div>
+            <div class="prod-info"><span class="prod-code">82050</span><h4 data-i18n="p26t">Clé de Porte Intérieure</h4><p data-i18n="p26d">Laitonnée jaune, en 6 combinaisons.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Φινίρισμα: χρωμιωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: chrome-plated|Available in 6 different combinations" data-spec-it="Finitura: cromata|Disponibile in 6 combinazioni diverse" data-spec-de="Ausführung: verchromt|Erhältlich in 6 verschiedenen Kombinationen" data-spec-fr="Finition : chromée|Disponible en 6 combinaisons différentes">
             <div class="prod-photo"><img src="../images/product-27.webp" loading="lazy" alt="Κλειδί μεσόπορτας χρώμιο"></div>
-            <div class="prod-info"><span class="prod-code">82055</span><h4 data-i18n="p27t">Κλειδί μεσόπορτας</h4><p data-i18n="p27d">Χρώμιο, σε 6 συνδυασμούς.</p></div>
+            <div class="prod-info"><span class="prod-code">82055</span><h4 data-i18n="p27t">Clé de Porte Intérieure</h4><p data-i18n="p27d">Chromée, en 6 combinaisons.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κλειδί '3' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, με συνδυασμό" data-spec-en="'3'-pin key|Finish: brass-nickel, with combination" data-spec-it="Chiave a '3' piombini|Finitura: ottone-nichel, con combinazione" data-spec-de="Schlüssel '3' Stifte|Ausführung: Messing-Nickel, mit Kombination" data-spec-fr="Clé '3' goupilles|Finition : laiton-nickel, avec combinaison">
             <div class="prod-photo"><img src="../images/product-28.webp" loading="lazy" alt="Κλειδί ασφαλείας 81001"></div>
-            <div class="prod-info"><span class="prod-code">81001</span><h4 data-i18n="p28t">Κλειδί ασφαλείας</h4><p data-i18n="p28d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
+            <div class="prod-info"><span class="prod-code">81001</span><h4 data-i18n="p28t">Clé de Sécurité</h4><p data-i18n="p28d">Combinaisons de verrouillage multiples.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κλειδί '4' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο" data-spec-en="'4'-pin key|Finish: brass-nickel, uncut" data-spec-it="Chiave a '4' piombini|Finitura: ottone-nichel, grezza" data-spec-de="Schlüssel '4' Stifte|Ausführung: Messing-Nickel, unbeschnitten" data-spec-fr="Clé '4' goupilles|Finition : laiton-nickel, non taillée">
             <div class="prod-photo"><img src="../images/product-29.webp" loading="lazy" alt="Κλειδί ασφαλείας 81010"></div>
-            <div class="prod-info"><span class="prod-code">81010</span><h4 data-i18n="p29t">Κλειδί ασφαλείας</h4><p data-i18n="p29d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
+            <div class="prod-info"><span class="prod-code">81010</span><h4 data-i18n="p29t">Clé de Sécurité</h4><p data-i18n="p29d">Combinaisons de verrouillage multiples.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Κλειδί '5' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο" data-spec-en="'5'-pin key|Finish: brass-nickel, uncut" data-spec-it="Chiave a '5' piombini|Finitura: ottone-nichel, grezza" data-spec-de="Schlüssel '5' Stifte|Ausführung: Messing-Nickel, unbeschnitten" data-spec-fr="Clé '5' goupilles|Finition : laiton-nickel, non taillée">
             <div class="prod-photo"><img src="../images/product-30.webp" loading="lazy" alt="Κλειδί ασφαλείας 81030"></div>
-            <div class="prod-info"><span class="prod-code">81030</span><h4 data-i18n="p30t">Κλειδί ασφαλείας</h4><p data-i18n="p30d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
+            <div class="prod-info"><span class="prod-code">81030</span><h4 data-i18n="p30t">Clé de Sécurité</h4><p data-i18n="p30d">Combinaisons de verrouillage multiples.</p></div>
           </article>
         </div>
       </div>
@@ -780,39 +798,39 @@
       <div class="cat-block reveal">
         <div class="cat-head">
           <div>
-            <h3 data-i18n="cat6.h">Αντικρύσματα</h3>
-            <p class="cat-desc" data-i18n="cat6.d">Αντικρύσματα απλά και ηλεκτρικά κυπριά, σε χρώμιο, ορειχαλκωμένα και χρυσά φινιρίσματα.</p>
+            <h3 data-i18n="cat6.h">Gâches</h3>
+            <p class="cat-desc" data-i18n="cat6.d">Gâches simples et gâches électriques, en finitions chromées, laitonnées et dorées.</p>
           </div>
-          <span class="cat-num" data-i18n="cat6.num">06. Αντικρύσματα</span>
+          <span class="cat-num" data-i18n="cat6.num">06. Gâches</span>
         </div>
         <div class="prod-grid">
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-31.webp" loading="lazy" alt="Αντίκρισμα απλό"></div>
-            <div class="prod-info"><span class="prod-code">85020</span><h4 data-i18n="p31t">Αντίκρισμα απλό</h4><p data-i18n="p31d">Για κλειδαριές κουτιαστές.</p></div>
+            <div class="prod-info"><span class="prod-code">85020</span><h4 data-i18n="p31t">Gâche Simple</h4><p data-i18n="p31d">Pour serrures à mortaiser.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Για κλειδαριά μεσόπορτας 2040-40" data-spec-en="For interior door lock 2040-40" data-spec-it="Per serratura per porta interna 2040-40" data-spec-de="Für Innentürschloss 2040-40" data-spec-fr="Pour serrure de porte intérieure 2040-40">
             <div class="prod-photo"><img src="../images/product-32.webp" loading="lazy" alt="Αντίκρισμα βαμμένο χρυσό για την κλειδαριά 2040-40"></div>
-            <div class="prod-info"><span class="prod-code">85005</span><h4 data-i18n="p32t">Αντίκρισμα βαμμένο χρυσό</h4><p data-i18n="p32d">Για την κλειδαριά 2040-40.</p></div>
+            <div class="prod-info"><span class="prod-code">85005</span><h4 data-i18n="p32t">Gâche Dorée</h4><p data-i18n="p32d">Pour la serrure 2040-40.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Για κλειδαριά μεσόπορτας 2010-40" data-spec-en="For interior door lock 2010-40" data-spec-it="Per serratura per porta interna 2010-40" data-spec-de="Für Innentürschloss 2010-40" data-spec-fr="Pour serrure de porte intérieure 2010-40">
             <div class="prod-photo"><img src="../images/product-33.webp" loading="lazy" alt="Αντίκρισμα ορειχαλκωμένο για την κλειδαριά 2010-40"></div>
-            <div class="prod-info"><span class="prod-code">85010</span><h4 data-i18n="p33t">Αντίκρισμα ορειχαλκωμένο</h4><p data-i18n="p33d">Για την κλειδαριά 2010-40.</p></div>
+            <div class="prod-info"><span class="prod-code">85010</span><h4 data-i18n="p33t">Gâche Laitonnée</h4><p data-i18n="p33d">Pour la serrure 2010-40.</p></div>
           </article>
           <article class="prod-card">
             <div class="prod-photo"><img src="../images/product-34.webp" loading="lazy" alt="Αντίκρισμα χρώμιο για την κλειδαριά 2030-40"></div>
-            <div class="prod-info"><span class="prod-code">85015</span><h4 data-i18n="p34t">Αντίκρισμα χρώμιο</h4><p data-i18n="p34d">Για την κλειδαριά 2030-40.</p></div>
+            <div class="prod-info"><span class="prod-code">85015</span><h4 data-i18n="p34t">Gâche Chromée</h4><p data-i18n="p34d">Pour la serrure 2030-40.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Δύο σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors|Two mounting points|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs." data-spec-it="Incassato, 8-12V, per porte metalliche|Due punti di fissaggio|La porta si apre tenendo premuto il pulsante|Linguetta regolabile per un'installazione perfetta senza spazi vuoti|Finitura: cromo|Confezione: 30 pz." data-spec-de="Verdeckt eingebaut, 8-12V, für Metalltüren|Zwei Befestigungspunkte|Tür öffnet sich durch dauerhaftes Drücken des Tasters|Verstellbare Falle für perfekten, spaltfreien Sitz|Ausführung: Chrom|Packung: 30 Stk." data-spec-fr="Encastré, 8-12V, pour portes métalliques|Deux points de fixation|La porte s'ouvre par pression continue du bouton|Pêne réglable pour un ajustement parfait sans jeu|Finition : chrome|Emballage : 30 pièces">
             <div class="prod-photo"><img src="../images/product-35.webp" loading="lazy" alt="Ηλεκτρικό κυπρί"></div>
-            <div class="prod-info"><span class="prod-code">51020</span><h4 data-i18n="p35t">Ηλεκτρικό κυπρί</h4><p data-i18n="p35d">8-12V, χρώμιο, δύο σημεία στήριξης.</p></div>
+            <div class="prod-info"><span class="prod-code">51020</span><h4 data-i18n="p35t">Gâche Électrique</h4><p data-i18n="p35d">8-12V, chromée, deux points de fixation.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Τέσσερα σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors|Four mounting points|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs." data-spec-it="Incassato, 8-12V, per porte metalliche|Quattro punti di fissaggio|La porta si apre tenendo premuto il pulsante|Linguetta regolabile per un'installazione perfetta senza spazi vuoti|Finitura: cromo|Confezione: 30 pz." data-spec-de="Verdeckt eingebaut, 8-12V, für Metalltüren|Vier Befestigungspunkte|Tür öffnet sich durch dauerhaftes Drücken des Tasters|Verstellbare Falle für perfekten, spaltfreien Sitz|Ausführung: Chrom|Packung: 30 Stk." data-spec-fr="Encastré, 8-12V, pour portes métalliques|Quatre points de fixation|La porte s'ouvre par pression continue du bouton|Pêne réglable pour un ajustement parfait sans jeu|Finition : chrome|Emballage : 30 pièces">
             <div class="prod-photo"><img src="../images/product-36.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με τέσσερα σημεία στήριξης"></div>
-            <div class="prod-info"><span class="prod-code">51020-AL</span><h4 data-i18n="p45t">Ηλεκτρικό κυπρί</h4><p data-i18n="p45d">8-12V, χρώμιο, τέσσερα σημεία στήριξης.</p></div>
+            <div class="prod-info"><span class="prod-code">51020-AL</span><h4 data-i18n="p45t">Gâche Électrique</h4><p data-i18n="p45d">8-12V, chromée, quatre points de fixation.</p></div>
           </article>
           <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες με &quot;μακριά&quot; λάμα, υψηλής αντοχής|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors with a &quot;long&quot; strike blade, high durability|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs." data-spec-it="Incassato, 8-12V, per porte metalliche con lama &quot;lunga&quot;, alta resistenza|La porta si apre tenendo premuto il pulsante|Linguetta regolabile per un'installazione perfetta senza spazi vuoti|Finitura: cromo|Confezione: 30 pz." data-spec-de="Verdeckt eingebaut, 8-12V, für Metalltüren mit &quot;langer&quot; Falle, hohe Haltbarkeit|Tür öffnet sich durch dauerhaftes Drücken des Tasters|Verstellbare Falle für perfekten, spaltfreien Sitz|Ausführung: Chrom|Packung: 30 Stk." data-spec-fr="Encastré, 8-12V, pour portes métalliques à lame &quot;longue&quot;, haute durabilité|La porte s'ouvre par pression continue du bouton|Pêne réglable pour un ajustement parfait sans jeu|Finition : chrome|Emballage : 30 pièces">
             <div class="prod-photo"><img src="../images/product-37.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με μακριά λάμα"></div>
-            <div class="prod-info"><span class="prod-code">51300</span><h4 data-i18n="p36t">Ηλεκτρικό κυπρί</h4><p data-i18n="p36d">8-12V, χρώμιο, με μακριά λάμα.</p></div>
+            <div class="prod-info"><span class="prod-code">51300</span><h4 data-i18n="p36t">Gâche Électrique</h4><p data-i18n="p36d">8-12V, chromée, avec gâche longue.</p></div>
           </article>
         </div>
       </div>
@@ -825,10 +843,10 @@
     <div class="container rev-bar">
       <a class="rev-badge" href="https://www.google.com/maps/place/%CE%A1%CE%9F%CE%A5%CE%9C%CE%95%CE%9B%CE%99%CE%A9%CE%A4%CE%97%CE%A3,+%CE%99.,+%26+%CE%A3%CE%99%CE%91+%CE%9F.%CE%95./@37.9796841,23.6964708,864m/data=!3m1!1e3!4m6!3m5!1s0x14a1bce9e0546139:0x24308d9eb6ec6207!8m2!3d37.9796841!4d23.6990457!16s%2Fg%2F1tj824ln" target="_blank" rel="noopener" aria-label="4,3 από 5 αστέρια στο Google Reviews">
         <svg class="rev-badge-g" viewBox="0 0 48 48" aria-hidden="true">
-          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
-          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
-          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
         </svg>
         <span class="rev-badge-text">
           <span class="rev-badge-brand">Google Reviews</span>
@@ -843,41 +861,45 @@
   <section id="contact" class="alt">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow" data-i18n="contact.eyebrow">ΕΠΙΚΟΙΝΩΝΙΑ</p>
-        <h2 data-i18n="contact.h2">Μιλήστε μαζί μας.</h2>
-        <p data-i18n="contact.intro">Για τεχνικές πληροφορίες, διαθεσιμότητα προϊόντων ή τιμοκατάλογο, επικοινωνήστε μαζί μας τηλεφωνικά ή στείλτε μας μήνυμα.</p>
+        <p class="eyebrow" data-i18n="contact.eyebrow">CONTACT</p>
+        <h2 data-i18n="contact.h2">Parlons-en.</h2>
+        <p data-i18n="contact.intro">Pour toute information technique, disponibilité des produits ou tarif, appelez-nous ou envoyez-nous un message.</p>
       </div>
       <div class="contact-wrap">
         <div class="info-card reveal">
           <div class="info-row">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.3" r="2.4"/></svg>
-            <div><span class="lbl" data-i18n="lbl.address">ΔΙΕΥΘΥΝΣΗ</span><a href="https://maps.app.goo.gl/LQYx8Q81JATfsAeo7" target="_blank" rel="noopener">Γ. Δημαράκη 21, Αθήνα</a></div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"></path><circle cx="12" cy="9.3" r="2.4"></circle></svg>
+            <div><span class="lbl" data-i18n="lbl.address">ADRESSE</span><a href="https://maps.app.goo.gl/LQYx8Q81JATfsAeo7" target="_blank" rel="noopener">Γ. Δημαράκη 21, Αθήνα</a></div>
           </div>
           <div class="info-row">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.5 5.5c0-.6.4-1 1-1h2.4c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.8 10.8a12 12 0 0 0 5.4 5.4l1.5-1.6a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1v2.4c0 .6-.4 1-1 1C10.6 19.5 4.5 13.4 4.5 5.5Z"/></svg>
-            <div><span class="lbl" data-i18n="lbl.phone">ΤΗΛΕΦΩΝΟ</span><a href="tel:+302103469528">210 3469 528</a></div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.5 5.5c0-.6.4-1 1-1h2.4c.5 0 .9.3 1 .8l.8 3a1 1 0 0 1-.3 1L7.8 10.8a12 12 0 0 0 5.4 5.4l1.5-1.6a1 1 0 0 1 1-.3l3 .8c.5.1.8.5.8 1v2.4c0 .6-.4 1-1 1C10.6 19.5 4.5 13.4 4.5 5.5Z"></path></svg>
+            <div><span class="lbl" data-i18n="lbl.phone">TÉLÉPHONE</span><a href="tel:+302103469528">210 3469 528</a></div>
           </div>
           <div class="info-row">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
             <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow"></a></div>
           </div>
           <div class="map-frame">
-            <iframe class="map-embed" src="https://www.google.com/maps?q=%CE%93.%20%CE%94%CE%B7%CE%BC%CE%B1%CF%81%CE%AC%CE%BA%CE%B7%2021%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1&output=embed" title="Χάρτης με την τοποθεσία της TESTA στον Βοτανικό, Αθήνα" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <iframe class="map-embed" src="https://www.google.com/maps?q=%CE%93.%20%CE%94%CE%B7%CE%BC%CE%B1%CF%81%CE%AC%CE%BA%CE%B7%2021%2C%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1&amp;output=embed" title="Χάρτης με την τοποθεσία της TESTA στον Βοτανικό, Αθήνα" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
           </div>
-          <a class="map-cta" href="https://maps.app.goo.gl/LQYx8Q81JATfsAeo7" target="_blank" rel="noopener" data-i18n="map.cta">ΔΕΙΤΕ ΣΤΟΝ ΧΑΡΤΗ →</a>
+          <a class="map-cta" href="https://maps.app.goo.gl/LQYx8Q81JATfsAeo7" target="_blank" rel="noopener" data-i18n="map.cta">VOIR SUR LA CARTE →</a>
         </div>
 
         <form class="contact-form reveal" id="contactForm">
           <input type="hidden" name="access_key" value="4db69685-8c09-4adc-8b1e-ab2674bad340">
           <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
           <div class="form-row">
-            <div class="field"><label for="fname" data-i18n="form.name">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</label><input id="fname" name="fname" type="text" required></div>
-            <div class="field"><label for="femail">Email</label><input id="femail" name="femail" type="email" required></div>
+            <div class="field"><label for="fname" data-i18n="form.name">NOM COMPLET</label><input id="fname" name="fname" type="text" required=""></div>
+            <div class="field"><label for="femail">Email</label><input id="femail" name="femail" type="email" required=""></div>
           </div>
-          <div class="field"><label for="fphone" data-i18n="form.phone">ΤΗΛΕΦΩΝΟ (ΠΡΟΑΙΡΕΤΙΚΟ)</label><input id="fphone" name="fphone" type="tel"></div>
-          <div class="field full"><label for="fmsg" data-i18n="form.message">ΜΗΝΥΜΑ</label><textarea id="fmsg" name="fmsg" required></textarea></div>
-          <p class="form-note" data-i18n="form.note">Θα λάβετε απάντηση στο email που θα καταχωρίσετε.</p>
-          <button type="submit" class="btn btn-primary submit-btn" data-i18n="form.submit">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
+          <div class="field"><label for="fphone" data-i18n="form.phone">TÉLÉPHONE (FACULTATIF)</label><input id="fphone" name="fphone" type="tel"></div>
+          <div class="field full"><label for="fmsg" data-i18n="form.message">MESSAGE</label><textarea id="fmsg" name="fmsg" required=""></textarea></div>
+          <p class="form-note" data-i18n="form.note">Vous recevrez une réponse à l'adresse e-mail que vous indiquerez.</p>
+          <div class="field-consent">
+            <input type="checkbox" id="fconsent" name="consent" required="">
+            <label for="fconsent" data-i18n="form.consent">J'accepte le traitement de mes données personnelles à des fins de contact</label>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn" data-i18n="form.submit" disabled="">ENVOYER LE MESSAGE</button>
           <p class="form-status" id="formStatus"></p>
         </form>
       </div>
@@ -1058,6 +1080,8 @@
       fr:"Nous fabriquons des gammes complètes de mécanismes de sécurité pour portes en aluminium, en fer et en bois, du cylindre jusqu'à la dernière clé."
     },
     "prod.specLabel": {el:"Τεχνικά στοιχεία", en:"Technical details", it:"Dettagli tecnici", de:"Technische Details", fr:"Détails techniques"},
+    "prod.searchPlaceholder": {el:"Αναζήτηση με κωδικό ή λέξη...", en:"Search by code or keyword...", it:"Cerca per codice o parola chiave...", de:"Suche nach Code oder Stichwort...", fr:"Rechercher par code ou mot-clé..."},
+    "prod.searchEmpty": {el:"Δεν βρέθηκαν προϊόντα.", en:"No products found.", it:"Nessun prodotto trovato.", de:"Keine Produkte gefunden.", fr:"Aucun produit trouvé."},
 
     "cat1.h": {el:"Κλειδαριές για Πόρτες Αλουμινίου", en:"Locks for Aluminium Doors", it:"Serrature per Porte in Alluminio", de:"Schlösser für Aluminiumtüren", fr:"Serrures pour Portes en Aluminium"},
     "cat1.d": {el:"Στενές και γλωσσάτες ασφάλειες Testa & Primo για πόρτες αλουμινίου, με ή χωρίς κύλινδρο.", en:"Narrow and latch locks by Testa & Primo for aluminium doors, with or without cylinder.", it:"Serrature strette e a scrocco Testa & Primo per porte in alluminio, con o senza cilindro.", de:"Schmale Schlösser und Fallenschlösser von Testa & Primo für Aluminiumtüren, mit oder ohne Zylinder.", fr:"Serrures étroites et à mentonnet Testa & Primo pour portes en aluminium, avec ou sans cylindre."},
@@ -1072,7 +1096,8 @@
     "cat3.num": {el:"03. Ξύλου", en:"03. Wood", it:"03. Legno", de:"03. Holz", fr:"03. Bois"},
 
     "cat4.h": {el:"Κύλινδροι Απλοί", en:"Simple Cylinders", it:"Cilindri Semplici", de:"Einfache Zylinder", fr:"Cylindres Simples"},
-    "cat4.d": {el:"Απλοί κύλινδροι, σε επιμεταλλωμένο φινίρισμα.", en:"Simple cylinders, in plated finish.", it:"Cilindri semplici, in finitura placcata.", de:"Einfache Zylinder, in beschichteter Ausführung.", fr:"Cylindres simples, en finition plaquée."},
+    // TODO(translation-review): el updated 2026-08-09 to match live copy ("Απλοί, μισοί και κύλινδροι με πόμολο, σε επιμεταλλωμένα και χρυσά φινιρίσματα.") — en/it/de/fr below still describe the OLDER shorter text ("Simple cylinders, plated finish") and need to be re-translated by a human to match. Do not trust these 4 until reviewed.
+    "cat4.d": {el:"Απλοί, μισοί και κύλινδροι με πόμολο, σε επιμεταλλωμένα και χρυσά φινιρίσματα.", en:"Simple cylinders, in plated finish.", it:"Cilindri semplici, in finitura placcata.", de:"Einfache Zylinder, in beschichteter Ausführung.", fr:"Cylindres simples, en finition plaquée."},
     "cat4.num": {el:"04. Κύλινδροι", en:"04. Cylinders", it:"04. Cilindri", de:"04. Zylinder", fr:"04. Cylindres"},
 
     "cat5.h": {el:"Κλειδιά", en:"Keys", it:"Chiavi", de:"Schlüssel", fr:"Clés"},
@@ -1182,6 +1207,13 @@
       fr:"Vous recevrez une réponse à l'adresse e-mail que vous indiquerez."
     },
     "form.submit": {el:"ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ", en:"SEND MESSAGE", it:"INVIA MESSAGGIO", de:"NACHRICHT SENDEN", fr:"ENVOYER LE MESSAGE"},
+    "form.consent": {
+      el:"Συμφωνώ με την επεξεργασία των στοιχείων μου για σκοπούς επικοινωνίας",
+      en:"I agree to the processing of my personal data for contact purposes",
+      it:"Accetto il trattamento dei miei dati personali per finalità di contatto",
+      de:"Ich stimme der Verarbeitung meiner Daten zu Kontaktzwecken zu",
+      fr:"J'accepte le traitement de mes données personnelles à des fins de contact"
+    },
 
   };
 
@@ -1221,6 +1253,12 @@
       var key = el.getAttribute('data-i18n-html');
       var entry = I18N[key];
       if (entry && entry[lang] != null) el.innerHTML = entry[lang];
+    });
+    var placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderNodes.forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      var entry = I18N[key];
+      if (entry && entry[lang] != null) el.setAttribute('placeholder', entry[lang]);
     });
     renderProductSpecs(lang);
   }
@@ -1358,6 +1396,34 @@
   });
   applyLanguage(currentLang);
 
+  var prodSearchInput = document.getElementById('prodSearch');
+  var prodSearchEmpty = document.getElementById('prodSearchEmpty');
+  var catBlocks = document.querySelectorAll('.cat-block');
+  function normalizeSearch(s){ return (s || '').toLowerCase(); }
+  function filterProducts(){
+    var q = normalizeSearch(prodSearchInput.value.trim());
+    var totalVisible = 0;
+    catBlocks.forEach(function(block){
+      var visibleInBlock = 0;
+      block.querySelectorAll('.prod-card').forEach(function(card){
+        var code = card.querySelector('.prod-code');
+        var title = card.querySelector('.prod-info h4');
+        var desc = card.querySelector('.prod-info p');
+        var haystack = normalizeSearch(
+          (code ? code.textContent : '') + ' ' +
+          (title ? title.textContent : '') + ' ' +
+          (desc ? desc.textContent : '')
+        );
+        var match = !q || haystack.indexOf(q) !== -1;
+        card.classList.toggle('is-hidden', !match);
+        if (match) { visibleInBlock++; totalVisible++; }
+      });
+      block.classList.toggle('is-hidden', visibleInBlock === 0);
+    });
+    prodSearchEmpty.hidden = totalVisible !== 0;
+  }
+  if (prodSearchInput) prodSearchInput.addEventListener('input', filterProducts);
+
   document.querySelectorAll('.prod-card[data-spec-el]').forEach(function(card){
     var code = card.querySelector('.prod-code');
     var title = card.querySelector('.prod-info h4');
@@ -1381,11 +1447,16 @@
 
   var contactForm = document.getElementById('contactForm');
   var formStatus = document.getElementById('formStatus');
+  var consentCheckbox = document.getElementById('fconsent');
+  var submitBtn = contactForm.querySelector('.submit-btn');
+  function updateSubmitState(){ submitBtn.disabled = !consentCheckbox.checked; }
+  consentCheckbox.addEventListener('change', updateSubmitState);
+  updateSubmitState();
   contactForm.addEventListener('submit', function(e){
     e.preventDefault();
+    if (!consentCheckbox.checked) { updateSubmitState(); return; }
     var L = currentLang;
     var name = document.getElementById('fname').value.trim();
-    var submitBtn = contactForm.querySelector('.submit-btn');
     var formData = new FormData(contactForm);
     formData.set('subject', JS_STR.subjectPrefix[L] + name);
     submitBtn.disabled = true;
@@ -1408,5 +1479,6 @@
     });
   });
 </script>
-</body>
-</html>
+
+
+</body></html>
