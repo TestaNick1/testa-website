@@ -6,6 +6,12 @@
 <title>TESTA · Ι. Ρουμελιώτης &amp; Σια Ο.Ε</title>
 <meta name="description" content="TESTA – Ι. Ρουμελιώτης &amp; Σια Ο.Ε: βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953. Ποιότητα Made in Greece με 5 χρόνια εγγύηση.">
 <link rel="canonical" href="https://www.testa.gr/">
+<link rel="alternate" hreflang="el" href="https://www.testa.gr/">
+<link rel="alternate" hreflang="en" href="https://www.testa.gr/en/">
+<link rel="alternate" hreflang="it" href="https://www.testa.gr/it/">
+<link rel="alternate" hreflang="de" href="https://www.testa.gr/de/">
+<link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.testa.gr/">
 
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -196,6 +202,7 @@
     text-decoration:none; white-space:nowrap; transition:transform .2s, box-shadow .2s;
   }
   .nav-cta:hover{transform:translateY(-1px); box-shadow:0 10px 20px -10px rgba(0,0,0,.35)}
+  @media (max-width:900px){ .nav-cta{display:none} }
 
   /* ---------- Social (header) ---------- */
   .nav-social{display:flex; align-items:center; gap:.5rem}
@@ -210,6 +217,7 @@
   .mobile-social{display:flex; align-items:center; gap:.6rem; margin-top:.4rem; padding-top:1rem; border-top:1px solid var(--line)}
   .mobile-social .nav-social-link{width:34px; height:34px}
   .mobile-social .nav-social-link svg{width:15px; height:15px}
+  .mobile-menu .menu-cta{display:block; margin:.6rem 0 .2rem; padding:.85em 1.2em; text-align:center; background:var(--accent); color:var(--accent-ink) !important; border-radius:var(--radius); text-transform:uppercase; font-weight:700; font-size:.82rem; letter-spacing:.05em}
 
   /* ---------- Language switch ---------- */
   .lang-switch{position:relative}
@@ -449,6 +457,7 @@
         <a href="#products" data-i18n="nav.products">ΠΡΟΪΟΝΤΑ</a>
         <a href="#contact" data-i18n="nav.contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
       </nav>
+      <a class="nav-cta" href="files/testa-catalog.pdf" download data-i18n="nav.catalog">ΚΑΤΕΒΑΣΤΕ ΤΟΝ ΚΑΤΑΛΟΓΟ</a>
       <div class="nav-social" aria-label="Ακολουθήστε μας στα κοινωνικά δίκτυα">
         <a class="nav-social-link" href="https://www.instagram.com/j.r.testa/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -494,6 +503,7 @@
     <a href="#history" data-i18n="nav.history">Η ΙΣΤΟΡΙΑ ΜΑΣ</a>
     <a href="#products" data-i18n="nav.products">ΠΡΟΪΟΝΤΑ</a>
     <a href="#contact" data-i18n="nav.contact">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+    <a class="menu-cta" href="files/testa-catalog.pdf" download data-i18n="nav.catalog">ΚΑΤΕΒΑΣΤΕ ΤΟΝ ΚΑΤΑΛΟΓΟ</a>
     <div class="mobile-social" aria-label="Ακολουθήστε μας στα κοινωνικά δίκτυα">
       <a class="nav-social-link" href="https://www.instagram.com/j.r.testa/" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -608,19 +618,19 @@
           <span class="cat-num" data-i18n="cat1.num">01. Αλουμίνιο</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: χρώμιο|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: χρώμιο|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: chrome|Cylinder: 54mm|Pack: 48 pcs.">
             <div class="prod-photo"><img src="images/product-01.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Testa"></div>
             <div class="prod-info"><span class="prod-code">1410-20</span><h4 data-i18n="p1t">Στενή ασφ. 20άρα Testa</h4><p data-i18n="p1d">Χρώμιο, με κύλινδρο 54χιλ.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κύλινδρος: 54mm|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Cylinder: 54mm|Pack: 48 pcs.">
             <div class="prod-photo"><img src="images/product-02.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo με κύλινδρο"></div>
             <div class="prod-info"><span class="prod-code">1460-20</span><h4 data-i18n="p2t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p2d">Με κύλινδρο 54χιλ., ορείχαλκος.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Χωρίς κύλινδρο|Συσκευασία: 48 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Χωρίς κύλινδρο|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Without cylinder|Pack: 48 pcs.">
             <div class="prod-photo"><img src="images/product-03.webp" loading="lazy" alt="Στενή ασφάλεια 20άρα Primo χωρίς κύλινδρο"></div>
             <div class="prod-info"><span class="prod-code">1460-20 Χ/Κ</span><h4 data-i18n="p3t">Στενή ασφ. 20άρα Primo</h4><p data-i18n="p3d">Χωρίς κύλινδρο.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κλειδιά: (2) χρωμιωμένα|Συσκευασία: 48 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο 20mm για σιδηρόπορτες και αλουμινόπορτες|Εύκολο γύρισμα άνω γλώσσας δεξιά-αριστερά|Φινίρισμα κλειδαριάς: γαλβάνισμα|Κλειδιά: (2) χρωμιωμένα|Συσκευασία: 48 τεμ." data-spec-en="20mm backset for iron and aluminium doors|Easy switch of upper latch direction, right or left|Lock finish: galvanized|Keys: (2) chrome-plated|Pack: 48 pcs.">
             <div class="prod-photo"><img src="images/product-04.webp" loading="lazy" alt="Στενή ασφάλεια Νο 20x8 Testa με μεγάλο κλειδί"></div>
             <div class="prod-info"><span class="prod-code">1480-20</span><h4 data-i18n="p4t">Στενή Νο 20x8 Testa</h4><p data-i18n="p4d">Με μεγάλο κλειδί.</p></div>
           </article>
@@ -648,15 +658,15 @@
           <span class="cat-num" data-i18n="cat2.num">02. Σιδήρου/Ξύλου</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card" data-spec="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Ειδικά επιμεταλλωμένα εξαρτήματα για αντοχή στη διάβρωση|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Ειδικά επιμεταλλωμένα εξαρτήματα για αντοχή στη διάβρωση|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 50mm|With security cylinder, for metal and wooden doors|With (3) keys|Finish: electrostatic paint, black|Special plated components for corrosion resistance|Available right (R) or left (L)|Pack: 36 pcs.">
             <div class="prod-photo"><img src="images/product-08.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα"></div>
             <div class="prod-info"><span class="prod-code">35100</span><h4 data-i18n="p8t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p8d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Περιέχει αντίκρισμα|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο: 50mm|Με κύλινδρο ασφαλείας, για μεταλλικές και ξύλινες πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Περιέχει αντίκρισμα|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 50mm|With security cylinder, for metal and wooden doors|With (3) keys|Finish: electrostatic paint, black|Includes strike plate|Available right (R) or left (L)|Pack: 36 pcs.">
             <div class="prod-photo"><img src="images/product-09.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 50άρα με αντίκρισμα"></div>
             <div class="prod-info"><span class="prod-code">35100 S</span><h4 data-i18n="p9t">Κουτιαστή ασφάλεια 50άρα</h4><p data-i18n="p9d">Δεξιά ή αριστερή, με αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρο: 55mm|Με κύλινδρο ασφαλείας, για μεταλλικές πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρο: 55mm|Με κύλινδρο ασφαλείας, για μεταλλικές πόρτες|Με (3) κλειδιά|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξιά (Δ) και αριστερή (Α)|Συσκευασία: 36 τεμ." data-spec-en="Backset: 55mm|With security cylinder, for metal doors|With (3) keys|Finish: electrostatic paint, black|Available right (R) or left (L)|Pack: 36 pcs.">
             <div class="prod-photo"><img src="images/product-10.webp" loading="lazy" alt="Κουτιαστή ασφάλεια 55άρα"></div>
             <div class="prod-info"><span class="prod-code">55100</span><h4 data-i18n="p10t">Κουτιαστή ασφάλεια 55άρα</h4><p data-i18n="p10d">Δεξιά ή αριστερή, χωρίς αντίκρισμα.</p></div>
           </article>
@@ -668,7 +678,7 @@
             <div class="prod-photo"><img src="images/product-12.webp" loading="lazy" alt="Κουτιαστή τραβηχτή 50άρα με αντίκρισμα"></div>
             <div class="prod-info"><span class="prod-code">36100 S</span><h4 data-i18n="p12t">Κουτιαστή τραβηχτή 50άρα</h4><p data-i18n="p12d">Με μεγάλο κλειδί, Δ/Α, με αντίκρισμα.</p></div>
           </article>
-          <article class="prod-card" data-spec="Για κλειδαριές κουτιαστές, ασφαλείας και απλές|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξί (Δ) και αριστερό (Α)|Συσκευασία: 10 τεμ.">
+          <article class="prod-card" data-spec-el="Για κλειδαριές κουτιαστές, ασφαλείας και απλές|Φινίρισμα: ηλεκτροστατική βαφή, χρώμα μαύρο|Διατίθεται σε δεξί (Δ) και αριστερό (Α)|Συσκευασία: 10 τεμ." data-spec-en="For mortise, security and simple locks|Finish: electrostatic paint, black|Available right (R) or left (L)|Pack: 10 pcs.">
             <div class="prod-photo"><img src="images/product-13.webp" loading="lazy" alt="Αντίκρισμα για κλειδαριές κουτιαστές"></div>
             <div class="prod-info"><span class="prod-code">36120</span><h4 data-i18n="p13t">Αντίκρισμα κουτιαστής</h4><p data-i18n="p13d">Για κλειδαριές κουτιαστές, Δ/Α.</p></div>
           </article>
@@ -684,15 +694,15 @@
           <span class="cat-num" data-i18n="cat3.num">03. Ξύλου</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card" data-spec="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά επιχρυσωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: ορειχάλκωση|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά επιχρυσωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: ορειχάλκωση|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|For wooden interior doors|With (2) gold-plated keys, in 6 different combinations|Finish: brass-plated|Includes strike plate and screws|Pack: 39 pcs.">
             <div class="prod-photo"><img src="images/product-14.webp" loading="lazy" alt="Μεσόπορτας Testa κίτρινη"></div>
             <div class="prod-info"><span class="prod-code">2010-40</span><h4 data-i18n="p14t">Μεσόπορτας Testa</h4><p data-i18n="p14d">Κίτρινη, κέντρα 40-75.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά χρωμιωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: χρώμιο|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρα: 40x75|Για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά χρωμιωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: χρώμιο|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|For wooden interior doors|With (2) chrome-plated keys, in 6 different combinations|Finish: chrome|Includes strike plate and screws|Pack: 39 pcs.">
             <div class="prod-photo"><img src="images/product-15.webp" loading="lazy" alt="Μεσόπορτας Testa χρώμιο"></div>
             <div class="prod-info"><span class="prod-code">2030-40</span><h4 data-i18n="p15t">Μεσόπορτας Testa</h4><p data-i18n="p15d">Χρώμιο, κέντρα 40-75.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κέντρα: 40x75|Κλειδαριά Primo για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά ορειχαλκωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: πρόσοψη και αντίκρισμα βαμμένα ηλεκτροστατικά με χρυσό|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ.">
+          <article class="prod-card" data-spec-el="Κέντρα: 40x75|Κλειδαριά Primo για ξύλινες εσωτερικές πόρτες|Με (2) κλειδιά ορειχαλκωμένα, σε 6 διαφορετικούς συνδυασμούς|Φινίρισμα: πρόσοψη και αντίκρισμα βαμμένα ηλεκτροστατικά με χρυσό|Περιλαμβάνει αντίκρισμα και βίδες|Συσκευασία: 39 τεμ." data-spec-en="Backset: 40x75|Primo lock for wooden interior doors|With (2) brass-plated keys, in 6 different combinations|Finish: front plate and strike plate electrostatically painted gold|Includes strike plate and screws|Pack: 39 pcs.">
             <div class="prod-photo"><img src="images/product-16.webp" loading="lazy" alt="Μεσόπορτας Primo βαμμένη χρυσή"></div>
             <div class="prod-info"><span class="prod-code">2040-40</span><h4 data-i18n="p16t">Μεσόπορτας Primo</h4><p data-i18n="p16d">Βαμμένη χρυσή, κέντρα 40-75.</p></div>
           </article>
@@ -736,31 +746,31 @@
           <span class="cat-num" data-i18n="cat5.num">05. Κλειδιά</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card" data-spec="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 4 διαφορετικούς συνδυασμούς">
+          <article class="prod-card" data-spec-el="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 4 διαφορετικούς συνδυασμούς" data-spec-en="Finish: galvanized|Available in 4 different combinations">
             <div class="prod-photo"><img src="images/product-24.webp" loading="lazy" alt="Κλειδί επίπλων γαλβανιζέ"></div>
             <div class="prod-info"><span class="prod-code">82010</span><h4 data-i18n="p24t">Κλειδί επίπλων</h4><p data-i18n="p24d">Γαλβανιζέ, σε 4 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card" data-spec="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
+          <article class="prod-card" data-spec-el="Φινίρισμα: γαλβανιζέ|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: galvanized|Available in 6 different combinations">
             <div class="prod-photo"><img src="images/product-25.webp" loading="lazy" alt="Κλειδί τραβηχτής γαλβανιζέ"></div>
             <div class="prod-info"><span class="prod-code">82030</span><h4 data-i18n="p25t">Κλειδί τραβηχτής</h4><p data-i18n="p25d">Γαλβανιζέ, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card" data-spec="Φινίρισμα: ορειχαλκωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
+          <article class="prod-card" data-spec-el="Φινίρισμα: ορειχαλκωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: brass-plated|Available in 6 different combinations">
             <div class="prod-photo"><img src="images/product-26.webp" loading="lazy" alt="Κλειδί μεσόπορτας κίτρινο ορειχαλκωμένο"></div>
             <div class="prod-info"><span class="prod-code">82050</span><h4 data-i18n="p26t">Κλειδί μεσόπορτας</h4><p data-i18n="p26d">Κίτρινο ορειχαλκωμένο, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card" data-spec="Φινίρισμα: χρωμιωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς">
+          <article class="prod-card" data-spec-el="Φινίρισμα: χρωμιωμένο|Διατίθεται σε 6 διαφορετικούς συνδυασμούς" data-spec-en="Finish: chrome-plated|Available in 6 different combinations">
             <div class="prod-photo"><img src="images/product-27.webp" loading="lazy" alt="Κλειδί μεσόπορτας χρώμιο"></div>
             <div class="prod-info"><span class="prod-code">82055</span><h4 data-i18n="p27t">Κλειδί μεσόπορτας</h4><p data-i18n="p27d">Χρώμιο, σε 6 συνδυασμούς.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κλειδί '3' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, με συνδυασμό">
+          <article class="prod-card" data-spec-el="Κλειδί '3' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, με συνδυασμό" data-spec-en="'3'-pin key|Finish: brass-nickel, with combination">
             <div class="prod-photo"><img src="images/product-28.webp" loading="lazy" alt="Κλειδί ασφαλείας 81001"></div>
             <div class="prod-info"><span class="prod-code">81001</span><h4 data-i18n="p28t">Κλειδί ασφαλείας</h4><p data-i18n="p28d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κλειδί '4' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο">
+          <article class="prod-card" data-spec-el="Κλειδί '4' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο" data-spec-en="'4'-pin key|Finish: brass-nickel, uncut">
             <div class="prod-photo"><img src="images/product-29.webp" loading="lazy" alt="Κλειδί ασφαλείας 81010"></div>
             <div class="prod-info"><span class="prod-code">81010</span><h4 data-i18n="p29t">Κλειδί ασφαλείας</h4><p data-i18n="p29d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
-          <article class="prod-card" data-spec="Κλειδί '5' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο">
+          <article class="prod-card" data-spec-el="Κλειδί '5' μπιλιών|Φινίρισμα: ορείχαλκος-νίκελ, άκοπο" data-spec-en="'5'-pin key|Finish: brass-nickel, uncut">
             <div class="prod-photo"><img src="images/product-30.webp" loading="lazy" alt="Κλειδί ασφαλείας 81030"></div>
             <div class="prod-info"><span class="prod-code">81030</span><h4 data-i18n="p30t">Κλειδί ασφαλείας</h4><p data-i18n="p30d">Πολλαπλοί συνδυασμοί κλειδώματος.</p></div>
           </article>
@@ -780,11 +790,11 @@
             <div class="prod-photo"><img src="images/product-31.webp" loading="lazy" alt="Αντίκρισμα απλό"></div>
             <div class="prod-info"><span class="prod-code">85020</span><h4 data-i18n="p31t">Αντίκρισμα απλό</h4><p data-i18n="p31d">Για κλειδαριές κουτιαστές.</p></div>
           </article>
-          <article class="prod-card" data-spec="Για κλειδαριά μεσόπορτας 2040-40">
+          <article class="prod-card" data-spec-el="Για κλειδαριά μεσόπορτας 2040-40" data-spec-en="For interior door lock 2040-40">
             <div class="prod-photo"><img src="images/product-32.webp" loading="lazy" alt="Αντίκρισμα βαμμένο χρυσό για την κλειδαριά 2040-40"></div>
             <div class="prod-info"><span class="prod-code">85005</span><h4 data-i18n="p32t">Αντίκρισμα βαμμένο χρυσό</h4><p data-i18n="p32d">Για την κλειδαριά 2040-40.</p></div>
           </article>
-          <article class="prod-card" data-spec="Για κλειδαριά μεσόπορτας 2010-40">
+          <article class="prod-card" data-spec-el="Για κλειδαριά μεσόπορτας 2010-40" data-spec-en="For interior door lock 2010-40">
             <div class="prod-photo"><img src="images/product-33.webp" loading="lazy" alt="Αντίκρισμα ορειχαλκωμένο για την κλειδαριά 2010-40"></div>
             <div class="prod-info"><span class="prod-code">85010</span><h4 data-i18n="p33t">Αντίκρισμα ορειχαλκωμένο</h4><p data-i18n="p33d">Για την κλειδαριά 2010-40.</p></div>
           </article>
@@ -792,15 +802,15 @@
             <div class="prod-photo"><img src="images/product-34.webp" loading="lazy" alt="Αντίκρισμα χρώμιο για την κλειδαριά 2030-40"></div>
             <div class="prod-info"><span class="prod-code">85015</span><h4 data-i18n="p34t">Αντίκρισμα χρώμιο</h4><p data-i18n="p34d">Για την κλειδαριά 2030-40.</p></div>
           </article>
-          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Δύο σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
+          <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Δύο σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors|Two mounting points|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs.">
             <div class="prod-photo"><img src="images/product-35.webp" loading="lazy" alt="Ηλεκτρικό κυπρί"></div>
             <div class="prod-info"><span class="prod-code">51020</span><h4 data-i18n="p35t">Ηλεκτρικό κυπρί</h4><p data-i18n="p35d">8-12V, χρώμιο, δύο σημεία στήριξης.</p></div>
           </article>
-          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Τέσσερα σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
+          <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες|Τέσσερα σημεία στήριξης|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors|Four mounting points|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs.">
             <div class="prod-photo"><img src="images/product-36.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με τέσσερα σημεία στήριξης"></div>
             <div class="prod-info"><span class="prod-code">51020-AL</span><h4 data-i18n="p45t">Ηλεκτρικό κυπρί</h4><p data-i18n="p45d">8-12V, χρώμιο, τέσσερα σημεία στήριξης.</p></div>
           </article>
-          <article class="prod-card" data-spec="Χωνευτό, 8-12V, για μεταλλικές πόρτες με &quot;μακριά&quot; λάμα, υψηλής αντοχής|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ.">
+          <article class="prod-card" data-spec-el="Χωνευτό, 8-12V, για μεταλλικές πόρτες με &quot;μακριά&quot; λάμα, υψηλής αντοχής|Άνοιγμα πόρτας με συνεχές πάτημα του μπουτόν|Ρυθμιζόμενη γλώσσα για άριστη εφαρμογή χωρίς κενά|Φινίρισμα: χρώμιο|Συσκευασία: 30 τεμ." data-spec-en="Concealed, 8-12V, for metal doors with a &quot;long&quot; strike blade, high durability|Door opens with continuous press of the button|Adjustable latch for a perfect, gap-free fit|Finish: chrome|Pack: 30 pcs.">
             <div class="prod-photo"><img src="images/product-37.webp" loading="lazy" alt="Ηλεκτρικό κυπρί με μακριά λάμα"></div>
             <div class="prod-info"><span class="prod-code">51300</span><h4 data-i18n="p36t">Ηλεκτρικό κυπρί</h4><p data-i18n="p36d">8-12V, χρώμιο, με μακριά λάμα.</p></div>
           </article>
@@ -858,13 +868,15 @@
         </div>
 
         <form class="contact-form reveal" id="contactForm">
+          <input type="hidden" name="access_key" value="4db69685-8c09-4adc-8b1e-ab2674bad340">
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="field"><label for="fname" data-i18n="form.name">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</label><input id="fname" name="fname" type="text" required></div>
             <div class="field"><label for="femail">Email</label><input id="femail" name="femail" type="email" required></div>
           </div>
           <div class="field"><label for="fphone" data-i18n="form.phone">ΤΗΛΕΦΩΝΟ (ΠΡΟΑΙΡΕΤΙΚΟ)</label><input id="fphone" name="fphone" type="tel"></div>
           <div class="field full"><label for="fmsg" data-i18n="form.message">ΜΗΝΥΜΑ</label><textarea id="fmsg" name="fmsg" required></textarea></div>
-          <p class="form-note" data-i18n="form.note">Το κουμπί ανοίγει το email σας με το μήνυμα έτοιμο προς αποστολή στο %EMAIL%.</p>
+          <p class="form-note" data-i18n="form.note">Θα λάβετε απάντηση στο email που θα καταχωρίσετε.</p>
           <button type="submit" class="btn btn-primary submit-btn" data-i18n="form.submit">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
           <p class="form-status" id="formStatus"></p>
         </form>
@@ -913,7 +925,17 @@
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "08:00",
       "closes": "17:30"
-    }]
+    }],
+    "sameAs": [
+      "https://www.instagram.com/j.r.testa/",
+      "https://www.tiktok.com/@testa.gr",
+      "https://www.facebook.com/profile.php?id=100004579576807"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "REPLACE_WITH_REAL_REVIEW_COUNT" // TODO: βάλε τον πραγματικό αριθμό αξιολογήσεων Google Reviews πριν το δημοσιεύσεις — αυτή τη στιγμή δεν υπάρχει πραγματικός αριθμός, οπότε ΔΕΝ πρέπει να μείνει fake τιμή (Google απαγορεύει ψευδή structured data)
+    }
   };
   var ldScript = document.createElement('script');
   ldScript.type = 'application/ld+json';
@@ -947,6 +969,7 @@
     "nav.history": {el:"Η ΙΣΤΟΡΙΑ ΜΑΣ", en:"OUR HISTORY", it:"LA NOSTRA STORIA", de:"UNSERE GESCHICHTE", fr:"NOTRE HISTOIRE"},
     "nav.products": {el:"ΠΡΟΪΟΝΤΑ", en:"PRODUCTS", it:"PRODOTTI", de:"PRODUKTE", fr:"PRODUITS"},
     "nav.contact": {el:"ΕΠΙΚΟΙΝΩΝΙΑ", en:"CONTACT", it:"CONTATTI", de:"KONTAKT", fr:"CONTACT"},
+    "nav.catalog": {el:"ΚΑΤΕΒΑΣΤΕ ΤΟΝ ΚΑΤΑΛΟΓΟ", en:"DOWNLOAD CATALOG", it:"SCARICA IL CATALOGO", de:"KATALOG HERUNTERLADEN", fr:"TÉLÉCHARGER LE CATALOGUE"},
 
     "hero.eyebrow": {el:"ΒΙΟΤΕΧΝΙΑ ΚΛΕΙΔΑΡΙΩΝ & ΚΥΛΙΝΔΡΩΝ ΑΣΦΑΛΕΙΑΣ", en:"LOCK & CYLINDER WORKSHOP", it:"OFFICINA DI SERRATURE E CILINDRI", de:"SCHLOSS- UND ZYLINDERWERKSTATT", fr:"ATELIER DE SERRURES ET CYLINDRES"},
     "hero.h1": {
@@ -1150,11 +1173,11 @@
     "form.phone": {el:"ΤΗΛΕΦΩΝΟ (ΠΡΟΑΙΡΕΤΙΚΟ)", en:"PHONE (OPTIONAL)", it:"TELEFONO (FACOLTATIVO)", de:"TELEFON (OPTIONAL)", fr:"TÉLÉPHONE (FACULTATIF)"},
     "form.message": {el:"ΜΗΝΥΜΑ", en:"MESSAGE", it:"MESSAGGIO", de:"NACHRICHT", fr:"MESSAGE"},
     "form.note": {
-      el:"Το κουμπί ανοίγει το email σας με το μήνυμα έτοιμο προς αποστολή στο %EMAIL%.",
-      en:"This button opens your email app with the message ready to send to %EMAIL%.",
-      it:"Questo pulsante apre la tua app email con il messaggio pronto per l'invio a %EMAIL%.",
-      de:"Diese Schaltfläche öffnet Ihre E-Mail-App mit der Nachricht, versandbereit an %EMAIL%.",
-      fr:"Ce bouton ouvre votre application e-mail avec le message prêt à être envoyé à %EMAIL%."
+      el:"Θα λάβετε απάντηση στο email που θα καταχωρίσετε.",
+      en:"You will receive a reply at the email address you provide.",
+      it:"Riceverai una risposta all'indirizzo email che fornirai.",
+      de:"Sie erhalten eine Antwort an die von Ihnen angegebene E-Mail-Adresse.",
+      fr:"Vous recevrez une réponse à l'adresse e-mail que vous indiquerez."
     },
     "form.submit": {el:"ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ", en:"SEND MESSAGE", it:"INVIA MESSAGGIO", de:"NACHRICHT SENDEN", fr:"ENVOYER LE MESSAGE"},
 
@@ -1162,18 +1185,24 @@
 
   var JS_STR = {
     subjectPrefix: {el:"Μήνυμα από το site: ", en:"Message from website: ", it:"Messaggio dal sito: ", de:"Nachricht von der Website: ", fr:"Message du site : "},
-    nameLabel: {el:"Όνομα: ", en:"Name: ", it:"Nome: ", de:"Name: ", fr:"Nom : "},
-    phoneLabel: {el:"Τηλέφωνο: ", en:"Phone: ", it:"Telefono: ", de:"Telefon: ", fr:"Téléphone : "},
-    emailLabel: {el:"Email: ", en:"Email: ", it:"Email: ", de:"E-Mail: ", fr:"Email : "},
-    statusMsg: {
-      el:"Άνοιξε η εφαρμογή email σας. Ελέγξτε το παράθυρο που εμφανίστηκε.",
-      en:"Your email app has opened. Check the window that appeared.",
-      it:"La tua app email si è aperta. Controlla la finestra apparsa.",
-      de:"Ihre E-Mail-App wurde geöffnet. Überprüfen Sie das erschienene Fenster.",
-      fr:"Votre application e-mail s'est ouverte. Vérifiez la fenêtre apparue."
+    sendingMsg: {el:"Αποστολή μηνύματος...", en:"Sending message...", it:"Invio messaggio...", de:"Nachricht wird gesendet...", fr:"Envoi du message..."},
+    successMsg: {
+      el:"Ευχαριστούμε! Το μήνυμά σας εστάλη με επιτυχία.",
+      en:"Thank you! Your message has been sent successfully.",
+      it:"Grazie! Il tuo messaggio è stato inviato con successo.",
+      de:"Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+      fr:"Merci ! Votre message a été envoyé avec succès."
+    },
+    errorMsg: {
+      el:"Κάτι πήγε στραβά. Δοκιμάστε ξανά ή καλέστε μας στο 210 3469 528.",
+      en:"Something went wrong. Please try again or call us at +30 210 3469 528.",
+      it:"Qualcosa è andato storto. Riprova o chiamaci al +30 210 3469 528.",
+      de:"Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns an: +30 210 3469 528.",
+      fr:"Une erreur s'est produite. Veuillez réessayer ou appelez-nous au +30 210 3469 528."
     }
   };
 
+  var LANG_BASE = '';
   var currentLang = 'el';
   try {
     var saved = localStorage.getItem('testa-lang');
@@ -1196,6 +1225,22 @@
       if (entry && entry[lang] != null) el.innerHTML = entry[lang];
     });
     try { localStorage.setItem('testa-lang', lang); } catch(e) {}
+    renderProductSpecs(lang);
+  }
+
+  function renderProductSpecs(lang){
+    var attr = 'spec' + lang.charAt(0).toUpperCase() + lang.slice(1);
+    document.querySelectorAll('.prod-card[data-spec-el]').forEach(function(card){
+      var list = card.querySelector('.prod-spec-list');
+      if (!list) return;
+      var raw = card.dataset[attr] || card.dataset.specEl;
+      list.innerHTML = '';
+      raw.split('|').forEach(function(line){
+        var li = document.createElement('li');
+        li.textContent = line;
+        list.appendChild(li);
+      });
+    });
   }
 
   var menuToggle = document.getElementById('menuToggle');
@@ -1247,18 +1292,14 @@
     if (e.key === 'Escape') closeLangMenu();
   });
 
-  function selectLang(lang, label){
-    langOptions.forEach(function(btn){
-      btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
-    });
-    langCurrentLabel.textContent = label;
-    applyLanguage(lang);
-    closeLangMenu();
+  function selectLang(lang){
+    if (lang === currentLang) { closeLangMenu(); return; }
+    window.location.href = LANG_BASE + (lang === 'el' ? '' : lang + '/');
   }
   langOptions.forEach(function(btn){
     btn.addEventListener('click', function(e){
       e.stopPropagation();
-      selectLang(this.getAttribute('data-lang'), this.textContent);
+      selectLang(this.getAttribute('data-lang'));
     });
   });
   langOptions.forEach(function(btn){
@@ -1285,7 +1326,7 @@
     var inner = document.createElement('div');
     inner.className = 'prod-detail-inner';
     inner.appendChild(catSpan);
-    if (card.dataset.spec) {
+    if (card.dataset.specEl) {
       var specLabel = document.createElement('span');
       specLabel.className = 'prod-spec-label';
       specLabel.setAttribute('data-i18n', 'prod.specLabel');
@@ -1293,11 +1334,6 @@
       inner.appendChild(specLabel);
       var specList = document.createElement('ul');
       specList.className = 'prod-spec-list';
-      card.dataset.spec.split('|').forEach(function(line){
-        var li = document.createElement('li');
-        li.textContent = line;
-        specList.appendChild(li);
-      });
       inner.appendChild(specList);
     }
     detail.appendChild(inner);
@@ -1325,17 +1361,57 @@
   });
   applyLanguage(currentLang);
 
-  document.getElementById('contactForm').addEventListener('submit', function(e){
+  document.querySelectorAll('.prod-card[data-spec-el]').forEach(function(card){
+    var code = card.querySelector('.prod-code');
+    var title = card.querySelector('.prod-info h4');
+    var desc = card.querySelector('.prod-info p');
+    if (!code || !title) return;
+    var productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": title.textContent.trim(),
+      "description": desc ? desc.textContent.trim() : title.textContent.trim(),
+      "sku": code.textContent.trim(),
+      "brand": { "@type": "Brand", "name": "TESTA" },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR"
+      }
+    };
+    var productLdScript = document.createElement('script');
+    productLdScript.type = 'application/ld+json';
+    productLdScript.textContent = JSON.stringify(productSchema);
+    document.head.appendChild(productLdScript);
+  });
+
+  var contactForm = document.getElementById('contactForm');
+  var formStatus = document.getElementById('formStatus');
+  contactForm.addEventListener('submit', function(e){
     e.preventDefault();
-    var name = document.getElementById('fname').value.trim();
-    var email = document.getElementById('femail').value.trim();
-    var phone = document.getElementById('fphone').value.trim();
-    var msg = document.getElementById('fmsg').value.trim();
     var L = currentLang;
-    var body = JS_STR.nameLabel[L] + name + '\n' + (phone ? (JS_STR.phoneLabel[L] + phone + '\n') : '') + JS_STR.emailLabel[L] + email + '\n\n' + msg;
-    var mailto = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(JS_STR.subjectPrefix[L] + name) + '&body=' + encodeURIComponent(body);
-    window.location.href = mailto;
-    document.getElementById('formStatus').textContent = JS_STR.statusMsg[L];
+    var name = document.getElementById('fname').value.trim();
+    var submitBtn = contactForm.querySelector('.submit-btn');
+    var formData = new FormData(contactForm);
+    formData.set('subject', JS_STR.subjectPrefix[L] + name);
+    submitBtn.disabled = true;
+    formStatus.textContent = JS_STR.sendingMsg[L];
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    }).then(function(res){ return res.json(); }).then(function(data){
+      submitBtn.disabled = false;
+      if (data.success) {
+        formStatus.textContent = JS_STR.successMsg[L];
+        contactForm.reset();
+      } else {
+        formStatus.textContent = JS_STR.errorMsg[L];
+      }
+    }).catch(function(){
+      submitBtn.disabled = false;
+      formStatus.textContent = JS_STR.errorMsg[L];
+    });
   });
 </script>
 </body>
