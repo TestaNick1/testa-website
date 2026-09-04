@@ -254,6 +254,10 @@
     transform:rotate(1.2deg);
   }
   .hero-art-frame img{width:100%; height:auto; display:block; aspect-ratio: 4/5; object-fit:cover}
+  @media (prefers-color-scheme: dark){
+    .hero-art-frame{ border:none; box-shadow:0 4px 20px rgba(0,0,0,.4); }
+  }
+  :root[data-theme="dark"] .hero-art-frame{ border:none; box-shadow:0 4px 20px rgba(0,0,0,.4); }
   .hero-tag{
     position:absolute; left:-18px; bottom:-18px; background:var(--ink); color:var(--bg);
     padding:1.3em 1.5em; border-radius:var(--radius); box-shadow:var(--shadow); max-width:300px;
@@ -715,14 +719,14 @@
           <span class="cat-num" data-i18n="cat4.num">04. Cylinders</span>
         </div>
         <div class="prod-grid">
-          <article class="prod-card">
+          <article class="prod-card" data-spec-el="Τύπος: Ελληνικός κύλινδρος ασφαλείας|Κέντρο: 27x27mm (54mm συνολικό μήκος)|Φινίρισμα: Ορείχαλκο|Περιλαμβάνει 3 κλειδιά">
             <div class="prod-info"><span class="prod-code">010-27/27</span><h4 data-i18n="p20t">Security Cylinder 54mm, Greek-made</h4><p data-i18n="p20d">Plated finish.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec-el="Τύπος: Ελληνικός κύλινδρος ασφαλείας|Κέντρο: 27x33mm (60mm συνολικό μήκος)|Φινίρισμα: Ορείχαλκο|Περιλαμβάνει 3 κλειδιά">
             <div class="prod-photo"><img src="../images/product-21.webp" loading="lazy" alt="Κύλινδρος ασφαλείας 60 χιλ. Ελληνικός"></div>
             <div class="prod-info"><span class="prod-code">010-27/33</span><h4 data-i18n="p21t">Security Cylinder 60mm</h4><p data-i18n="p21d">Greek-made.</p></div>
           </article>
-          <article class="prod-card">
+          <article class="prod-card" data-spec-el="Τύπος: Ελληνικός κύλινδρος ασφαλείας|Κέντρο: 30x45mm (75mm συνολικό μήκος)|Φινίρισμα: Νίκελ|Περιλαμβάνει 3 κλειδιά">
             <div class="prod-info"><span class="prod-code">010-30/45Ν</span><h4 data-i18n="p22t">Security Cylinder 75mm</h4><p data-i18n="p22d">Nickel, Greek-made.</p></div>
           </article>
         </div>
@@ -1468,6 +1472,7 @@
     });
   });
 </script>
+
 
 
 
