@@ -16,13 +16,14 @@ const { JSDOM } = require('jsdom');
 
 const ROOT = __dirname;
 const SOURCE_FILE = path.join(ROOT, 'index.html');
-const LANGS = ['el', 'en', 'it', 'de', 'fr'];
+const LANGS = ['el', 'en', 'it', 'de', 'fr', 'es'];
 const OUTPUT_PATH = {
   el: 'index.html',
   en: 'en/index.html',
   it: 'it/index.html',
   de: 'de/index.html',
-  fr: 'fr/index.html'
+  fr: 'fr/index.html',
+  es: 'es/index.html'
 };
 
 // Per-language <head> metadata (title/description/OG/Twitter). This is the
@@ -78,6 +79,16 @@ const META = {
     ogLocale: 'fr_FR',
     twitterTitle: 'TESTA · Ι. Roumeliotis & Sia Ο.Ε — Une sécurité durable, depuis 1953',
     twitterDescription: 'Atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.'
+  },
+  es: {
+    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    description: 'TESTA – Ι. Roumeliotis & Cía. Ο.Ε: taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.',
+    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogTitle: 'TESTA · Ι. Roumeliotis & Cía. Ο.Ε — Seguridad que perdura, desde 1953',
+    ogDescription: 'Taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.',
+    ogLocale: 'es_ES',
+    twitterTitle: 'TESTA · Ι. Roumeliotis & Cía. Ο.Ε — Seguridad que perdura, desde 1953',
+    twitterDescription: 'Taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.'
   }
 };
 
