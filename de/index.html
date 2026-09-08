@@ -250,14 +250,10 @@
   .hero-art{position:relative}
   .hero-art-frame{
     position:relative; border-radius:var(--radius); overflow:hidden; background:var(--bg-card);
-    box-shadow:var(--shadow); border:1px solid var(--line);
+    box-shadow:0 4px 20px rgba(0,0,0,.4); border:none;
     transform:rotate(1.2deg);
   }
   .hero-art-frame img{width:100%; height:auto; display:block; aspect-ratio: 4/5; object-fit:cover}
-  @media (prefers-color-scheme: dark){
-    .hero-art-frame{ border:none; box-shadow:0 4px 20px rgba(0,0,0,.4); }
-  }
-  :root[data-theme="dark"] .hero-art-frame{ border:none; box-shadow:0 4px 20px rgba(0,0,0,.4); }
   .hero-tag{
     position:absolute; left:-18px; bottom:-18px; background:var(--ink); color:var(--bg);
     padding:1.3em 1.5em; border-radius:var(--radius); box-shadow:var(--shadow); max-width:300px;
@@ -1472,6 +1468,7 @@
     });
   });
 </script>
+
 
 
 
