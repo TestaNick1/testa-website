@@ -197,6 +197,24 @@ function main() {
         placeholderCount++;
       }
     });
+    let altCount = 0;
+    doc.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-alt');
+      const entry = I18N[key];
+      if (entry && entry[lang] != null) {
+        el.setAttribute('alt', entry[lang]);
+        altCount++;
+      }
+    });
+    let ariaCount = 0;
+    doc.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-aria');
+      const entry = I18N[key];
+      if (entry && entry[lang] != null) {
+        el.setAttribute('aria-label', entry[lang]);
+        ariaCount++;
+      }
+    });
 
     // Language switcher initial state (is-active class + visible label)
     // matches the page's own language before any JS runs.
@@ -244,7 +262,7 @@ function main() {
     const serialized = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML + '\n';
     fs.writeFileSync(outPath, serialized, 'utf8');
 
-    report.push({ lang, outRelPath, textCount, htmlCount, placeholderCount, canonical: canonicalUrl(lang) });
+    report.push({ lang, outRelPath, textCount, htmlCount, placeholderCount, altCount, ariaCount, canonical: canonicalUrl(lang) });
   }
 
   console.log(JSON.stringify(report, null, 2));
