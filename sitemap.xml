@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.testa.gr/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://www.testa.gr/en/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://www.testa.gr/it/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://www.testa.gr/de/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://www.testa.gr/fr/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://www.testa.gr/es/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/"/>
@@ -78,5 +78,83 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/en/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/it/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/de/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/fr/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.testa.gr/es/privacy.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html"/>
   </url>
 </urlset>
