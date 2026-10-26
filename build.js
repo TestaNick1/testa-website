@@ -41,9 +41,9 @@ const META = {
     twitterDescription: 'Βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953. Ποιότητα Made in Greece με 5 χρόνια εγγύηση.'
   },
   en: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · I. Roumeliotis & Sia O.E',
     description: 'TESTA – I. Roumeliotis & Sia O.E: lock, cylinder and security key workshop in Athens since 1953. Made in Greece quality with a 5-year warranty.',
-    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Security that lasts, since 1953',
     ogDescription: 'Lock, cylinder and security key workshop in Athens since 1953. Made in Greece quality with a 5-year warranty.',
     ogLocale: 'en_US',
@@ -51,9 +51,9 @@ const META = {
     twitterDescription: 'Lock, cylinder and security key workshop in Athens since 1953. Made in Greece quality with a 5-year warranty.'
   },
   it: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · I. Roumeliotis & Sia O.E',
     description: 'TESTA – I. Roumeliotis & Sia O.E: officina di serrature, cilindri e chiavi di sicurezza ad Atene dal 1953. Qualità Made in Greece con 5 anni di garanzia.',
-    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Sicurezza che dura, dal 1953',
     ogDescription: 'Officina di serrature, cilindri e chiavi di sicurezza ad Atene dal 1953. Qualità Made in Greece con 5 anni di garanzia.',
     ogLocale: 'it_IT',
@@ -61,9 +61,9 @@ const META = {
     twitterDescription: 'Officina di serrature, cilindri e chiavi di sicurezza ad Atene dal 1953. Qualità Made in Greece con 5 anni di garanzia.'
   },
   de: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · I. Roumeliotis & Sia O.E',
     description: 'TESTA – I. Roumeliotis & Sia O.E: Werkstatt für Schlösser, Zylinder und Sicherheitsschlüssel in Athen seit 1953. Made in Greece Qualität mit 5 Jahren Garantie.',
-    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Sicherheit, die hält, seit 1953',
     ogDescription: 'Werkstatt für Schlösser, Zylinder und Sicherheitsschlüssel in Athen seit 1953. Made in Greece Qualität mit 5 Jahren Garantie.',
     ogLocale: 'de_DE',
@@ -71,9 +71,9 @@ const META = {
     twitterDescription: 'Werkstatt für Schlösser, Zylinder und Sicherheitsschlüssel in Athen seit 1953. Made in Greece Qualität mit 5 Jahren Garantie.'
   },
   fr: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · I. Roumeliotis & Sia O.E',
     description: 'TESTA – I. Roumeliotis & Sia O.E : atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.',
-    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Une sécurité durable, depuis 1953',
     ogDescription: 'Atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.',
     ogLocale: 'fr_FR',
@@ -81,9 +81,9 @@ const META = {
     twitterDescription: 'Atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.'
   },
   es: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · I. Roumeliotis & Sia O.E',
     description: 'TESTA – I. Roumeliotis & Sia O.E: taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.',
-    ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Seguridad que perdura, desde 1953',
     ogDescription: 'Taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.',
     ogLocale: 'es_ES',
