@@ -113,7 +113,8 @@ function extractI18N(html) {
 }
 
 function main() {
-  const sourceHtml = fs.readFileSync(SOURCE_FILE, 'utf8');
+  // Strip a leading BOM: JSDOM treats it as body text, which empties <head>.
+  const sourceHtml = fs.readFileSync(SOURCE_FILE, 'utf8').replace(/^﻿/, '');
   const I18N = extractI18N(sourceHtml);
 
   // Sanity check: every language must have a value for every key.

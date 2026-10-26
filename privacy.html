@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Πολιτική απορρήτου · TESTA</title>
+<link rel="canonical" href="https://www.testa.gr/privacy.html">
+<link rel="alternate" hreflang="el" href="https://www.testa.gr/privacy.html">
+<link rel="alternate" hreflang="en" href="https://www.testa.gr/en/privacy.html">
+<link rel="alternate" hreflang="it" href="https://www.testa.gr/it/privacy.html">
+<link rel="alternate" hreflang="de" href="https://www.testa.gr/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://www.testa.gr/fr/privacy.html">
+<link rel="alternate" hreflang="es" href="https://www.testa.gr/es/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://www.testa.gr/privacy.html">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+<style>
+  @font-face {
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/fonts/alegreya-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+  }
+  @font-face {
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/fonts/alegreya-greek.woff2') format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  @font-face {
+    font-family: 'Source Sans';
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('/fonts/source-sans-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+  }
+  @font-face {
+    font-family: 'Source Sans';
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('/fonts/source-sans-greek.woff2') format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+
+  :root{
+    --bg:#141416;
+    --bg-card:#1f1f22;
+    --ink:#ededed;
+    --ink-soft:#a8a8ac;
+    --line: rgba(237,237,237,0.14);
+    --accent:#f5f5f2;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Source Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .container{max-width:860px; margin:0 auto; padding:0 clamp(20px,4vw,56px)}
+  .top{border-bottom:1px solid var(--line); padding:1.1rem 0}
+  .top-inner{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap}
+  .brand{display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-decoration:none; color:var(--ink)}
+  .brand-logo{height:30px; width:auto; display:block; filter:invert(1) brightness(1.15)}
+  .brand-sub{display:block; font-size:.58rem; letter-spacing:.22em; color:var(--ink-soft); font-weight:600; margin-top:1px}
+  .langs{display:flex; flex-wrap:wrap; gap:.4rem 1rem; margin:0; padding:0; list-style:none}
+  .langs a{font-size:.74rem; font-weight:700; letter-spacing:.12em; color:var(--ink-soft); text-decoration:none}
+  .langs a:hover, .langs a[aria-current="page"]{color:var(--ink)}
+  main{padding:clamp(40px,7vw,84px) 0 clamp(48px,7vw,90px)}
+  h1, h2{font-family:'Alegreya', Georgia, serif; font-weight:800; line-height:1.1; color:var(--ink); margin:0}
+  h1{font-size:clamp(1.6rem,4.6vw,3rem); margin-bottom:1.4rem; overflow-wrap:break-word; hyphens:auto}
+  h2{font-size:1.2rem; margin:2.2rem 0 .5rem}
+  p{margin:0 0 1em; color:var(--ink-soft); max-width:68ch}
+  p a{color:var(--ink)}
+  p a:hover{color:var(--accent)}
+  .back{display:inline-block; margin-top:2.6rem; font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; color:var(--ink)}
+  .back:hover{color:var(--accent)}
+  footer{border-top:1px solid var(--line); padding:2.6rem 0}
+  footer p{margin:0; font-size:.82rem}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="container top-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="images/testa-logo.png" alt="Testa">
+      <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
+    </a>
+    <ul class="langs" aria-label="Γλώσσα">
+      <li><a href="privacy.html" hreflang="el" lang="el" aria-current="page">EL</a></li>
+      <li><a href="en/privacy.html" hreflang="en" lang="en">EN</a></li>
+      <li><a href="it/privacy.html" hreflang="it" lang="it">IT</a></li>
+      <li><a href="de/privacy.html" hreflang="de" lang="de">DE</a></li>
+      <li><a href="fr/privacy.html" hreflang="fr" lang="fr">FR</a></li>
+      <li><a href="es/privacy.html" hreflang="es" lang="es">ES</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+  <h1>Πολιτική απορρήτου</h1>
+  <h2>1. Υπεύθυνος επεξεργασίας</h2>
+  <p>Ι. Ρουμελιώτης &amp; Σια Ο.Ε (TESTA), Γ. Δημαράκη 21, Αθήνα. Τηλέφωνο: 210 3469 528. Email: <a href="mailto:testa@otenet.gr">testa@otenet.gr</a>.</p>
+  <h2>2. Δεδομένα που συλλέγουμε</h2>
+  <p>Όταν μας στέλνετε μήνυμα μέσω της φόρμας επικοινωνίας, συλλέγουμε το ονοματεπώνυμό σας, τη διεύθυνση email σας, το τηλέφωνό σας (προαιρετικά) και το περιεχόμενο του μηνύματός σας. Δεν συλλέγουμε άλλα προσωπικά δεδομένα μέσω της φόρμας.</p>
+  <h2>3. Σκοπός και νομική βάση</h2>
+  <p>Χρησιμοποιούμε τα στοιχεία σας αποκλειστικά για να απαντήσουμε στο μήνυμά σας και να σας δώσουμε τις πληροφορίες που ζητήσατε. Νομική βάση είναι η συγκατάθεσή σας (άρθρο 6 παρ. 1 στοιχ. α΄ του ΓΚΠΔ), που δίνετε με το σχετικό πλαίσιο επιλογής πριν από την αποστολή. Δεν χρησιμοποιούμε τα στοιχεία σας για διαφήμιση και δεν τα πουλάμε.</p>
+  <h2>4. Αποδέκτες</h2>
+  <p>Το μήνυμά σας διαβιβάζεται στο email μας μέσω της υπηρεσίας φορμών Web3Forms, η οποία επεξεργάζεται τα δεδομένα για λογαριασμό μας αποκλειστικά για τη μεταφορά του μηνύματος. Δεν διαβιβάζουμε τα στοιχεία σας σε άλλους τρίτους, εκτός αν το απαιτεί ο νόμος.</p>
+  <h2>5. Διατήρηση</h2>
+  <p>Διατηρούμε το μήνυμά σας για όσο χρειάζεται ώστε να το απαντήσουμε και το πολύ για 12 μήνες από την τελευταία επικοινωνία, εκτός αν ο νόμος απαιτεί μεγαλύτερο διάστημα (π.χ. αν προκύψει παραγγελία).</p>
+  <h2>6. Τα δικαιώματά σας</h2>
+  <p>Έχετε δικαίωμα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού της επεξεργασίας, εναντίωσης και φορητότητας των δεδομένων σας, καθώς και δικαίωμα ανάκλησης της συγκατάθεσής σας ανά πάσα στιγμή, χωρίς να επηρεάζεται η νομιμότητα της επεξεργασίας που έγινε πριν την ανάκληση. Για να ασκήσετε τα δικαιώματά σας, επικοινωνήστε στο <a href="mailto:testa@otenet.gr">testa@otenet.gr</a>. Έχετε επίσης δικαίωμα καταγγελίας στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (<a href="https://www.dpa.gr/" target="_blank" rel="noopener">www.dpa.gr</a>).</p>
+  <h2>7. Cookies και εξωτερικές υπηρεσίες</h2>
+  <p>Η ιστοσελίδα δεν χρησιμοποιεί cookies παρακολούθησης ή διαφήμισης. Ο χάρτης στο τέλος της σελίδας φορτώνεται από την Google (Google Maps), η οποία μπορεί να λαμβάνει τη διεύθυνση IP σας και να χρησιμοποιεί cookies σύμφωνα με τη δική της πολιτική απορρήτου. Οι σύνδεσμοι προς Instagram, TikTok και Facebook οδηγούν σε εξωτερικές ιστοσελίδες με δική τους πολιτική απορρήτου.</p>
+  <h2>8. Τελευταία ενημέρωση</h2>
+  <p>Οκτώβριος 2026.</p>
+  <a class="back" href="index.html">← Επιστροφή στην αρχική</a>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="yr">2026</span> TESTA</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

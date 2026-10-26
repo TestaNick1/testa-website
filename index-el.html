@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="el"><head></head><body>﻿
-
-
+<html lang="el">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TESTA · Ι. Ρουμελιώτης &amp; Σια Ο.Ε</title>
@@ -414,6 +413,8 @@
   .field-consent{display:flex; align-items:flex-start; gap:.6em; margin:0 0 1.3rem; font-size:.82rem; color:var(--ink-soft); line-height:1.4}
   .field-consent input[type="checkbox"]{margin-top:.2em; width:16px; height:16px; accent-color:var(--accent); cursor:pointer; flex-shrink:0}
   .field-consent label{cursor:pointer}
+  .field-consent a{color:var(--ink); text-decoration:underline; text-underline-offset:2px}
+  .field-consent a:hover{color:var(--accent)}
   .submit-btn{border:none; cursor:pointer; font-family:inherit}
   .submit-btn:disabled{opacity:.5; cursor:not-allowed}
   .form-status{font-size:.85rem; margin-top:.9rem; min-height:1.2em}
@@ -422,6 +423,8 @@
   footer{border-top:1px solid var(--line); padding:2.6rem 0}
   .foot-inner{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap}
   .foot-inner p{margin:0; font-size:.82rem; color:var(--ink-soft)}
+  .foot-link{font-size:.82rem; color:var(--ink-soft); text-decoration:none}
+  .foot-link:hover{color:var(--accent)}
   .theme-note{font-size:.75rem; color:var(--ink-soft)}
 
   /* ---------- Reveal ---------- */
@@ -447,8 +450,8 @@
 <noscript>
 <style>.reveal{opacity:1 !important; transform:none !important}</style>
 </noscript>
-
-
+</head>
+<body>
 
 <header id="siteHeader">
   <div class="container nav-inner">
@@ -883,6 +886,10 @@
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
             <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow"></a></div>
           </div>
+          <div class="info-row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>
+            <div><span class="lbl" data-i18n="lbl.hours">ΩΡΑΡΙΟ</span><span class="val" data-i18n="hours.val">Δευτέρα – Παρασκευή: 08:00 – 17:30</span></div>
+          </div>
           <div class="map-frame">
             <iframe class="map-embed" src="https://www.google.com/maps?q=37.9796841,23.6990457&amp;output=embed" title="Χάρτης με την τοποθεσία της TESTA στον Βοτανικό, Αθήνα" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
           </div>
@@ -901,7 +908,7 @@
           <p class="form-note" data-i18n="form.note">Θα λάβετε απάντηση στο email που θα καταχωρίσετε.</p>
           <div class="field-consent">
             <input type="checkbox" id="fconsent" name="consent" required="">
-            <label for="fconsent" data-i18n="form.consent">Συμφωνώ με την επεξεργασία των στοιχείων μου για σκοπούς επικοινωνίας</label>
+            <label for="fconsent" data-i18n-html="form.consent">Συμφωνώ με την επεξεργασία των στοιχείων μου για σκοπούς επικοινωνίας, σύμφωνα με την <a href="privacy.html" target="_blank" rel="noopener">Πολιτική απορρήτου</a></label>
           </div>
           <button type="submit" class="btn btn-primary submit-btn" data-i18n="form.submit" disabled="">ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ</button>
           <p class="form-status" id="formStatus"></p>
@@ -914,6 +921,7 @@
 <footer>
   <div class="container foot-inner">
     <p>© <span id="yr"></span> TESTA</p>
+    <a class="foot-link" href="privacy.html" data-i18n="foot.privacy">Πολιτική απορρήτου</a>
   </div>
 </footer>
 
@@ -956,12 +964,7 @@
       "https://www.instagram.com/j.r.testa/",
       "https://www.tiktok.com/@testa.gr",
       "https://www.facebook.com/profile.php?id=100004579576807"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.3",
-      "reviewCount": "REPLACE_WITH_REAL_REVIEW_COUNT" // TODO: βάλε τον πραγματικό αριθμό αξιολογήσεων Google Reviews πριν το δημοσιεύσεις — αυτή τη στιγμή δεν υπάρχει πραγματικός αριθμός, οπότε ΔΕΝ πρέπει να μείνει fake τιμή (Google απαγορεύει ψευδή structured data)
-    }
+    ]
   };
   var ldScript = document.createElement('script');
   ldScript.type = 'application/ld+json';
@@ -1200,6 +1203,8 @@
     },
     "lbl.address": {el:"ΔΙΕΥΘΥΝΣΗ", en:"ADDRESS", it:"INDIRIZZO", de:"ADRESSE", fr:"ADRESSE"},
     "lbl.phone": {el:"ΤΗΛΕΦΩΝΟ", en:"PHONE", it:"TELEFONO", de:"TELEFON", fr:"TÉLÉPHONE"},
+    "lbl.hours": {el:"ΩΡΑΡΙΟ", en:"OPENING HOURS", it:"ORARI", de:"ÖFFNUNGSZEITEN", fr:"HORAIRES"},
+    "hours.val": {el:"Δευτέρα – Παρασκευή: 08:00 – 17:30", en:"Monday – Friday: 08:00 – 17:30", it:"Lunedì – Venerdì: 08:00 – 17:30", de:"Montag – Freitag: 08:00 – 17:30", fr:"Lundi – Vendredi : 08h00 – 17h30"},
     "map.cta": {el:"ΔΕΙΤΕ ΣΤΟΝ ΧΑΡΤΗ →", en:"VIEW ON MAP →", it:"VEDI SULLA MAPPA →", de:"AUF DER KARTE ANSEHEN →", fr:"VOIR SUR LA CARTE →"},
 
     "form.name": {el:"ΟΝΟΜΑΤΕΠΩΝΥΜΟ", en:"FULL NAME", it:"NOME E COGNOME", de:"VOLLSTÄNDIGER NAME", fr:"NOM COMPLET"},
@@ -1214,12 +1219,13 @@
     },
     "form.submit": {el:"ΑΠΟΣΤΟΛΗ ΜΗΝΥΜΑΤΟΣ", en:"SEND MESSAGE", it:"INVIA MESSAGGIO", de:"NACHRICHT SENDEN", fr:"ENVOYER LE MESSAGE"},
     "form.consent": {
-      el:"Συμφωνώ με την επεξεργασία των στοιχείων μου για σκοπούς επικοινωνίας",
-      en:"I agree to the processing of my personal data for contact purposes",
-      it:"Accetto il trattamento dei miei dati personali per finalità di contatto",
-      de:"Ich stimme der Verarbeitung meiner Daten zu Kontaktzwecken zu",
-      fr:"J'accepte le traitement de mes données personnelles à des fins de contact"
+      el:"Συμφωνώ με την επεξεργασία των στοιχείων μου για σκοπούς επικοινωνίας, σύμφωνα με την <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Πολιτική απορρήτου</a>",
+      en:"I agree to the processing of my personal data for contact purposes, as described in the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>",
+      it:"Accetto il trattamento dei miei dati personali per finalità di contatto, secondo l'<a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Informativa sulla privacy</a>",
+      de:"Ich stimme der Verarbeitung meiner Daten zu Kontaktzwecken gemäß der <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Datenschutzerklärung</a> zu",
+      fr:"J'accepte le traitement de mes données personnelles à des fins de contact, conformément à la <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">Politique de confidentialité</a>"
     },
+    "foot.privacy": {el:"Πολιτική απορρήτου", en:"Privacy Policy", it:"Informativa sulla privacy", de:"Datenschutzerklärung", fr:"Politique de confidentialité"},
 
   };
 
