@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Η σελίδα δεν βρέθηκε / Page not found · TESTA</title>
+<meta name="robots" content="noindex">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<style>
+  @font-face {
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/fonts/alegreya-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+  }
+  @font-face {
+    font-family: 'Alegreya';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/fonts/alegreya-greek.woff2') format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  @font-face {
+    font-family: 'Source Sans';
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('/fonts/source-sans-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+  }
+  @font-face {
+    font-family: 'Source Sans';
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url('/fonts/source-sans-greek.woff2') format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+
+  :root{
+    --bg:#141416;
+    --bg-card:#1f1f22;
+    --ink:#ededed;
+    --ink-soft:#a8a8ac;
+    --line: rgba(237,237,237,0.14);
+    --accent:#f5f5f2;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Source Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .container{max-width:860px; margin:0 auto; padding:0 clamp(20px,4vw,56px)}
+  .top{border-bottom:1px solid var(--line); padding:1.1rem 0}
+  .top-inner{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap}
+  .brand{display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-decoration:none; color:var(--ink)}
+  .brand-logo{height:30px; width:auto; display:block; filter:invert(1) brightness(1.15)}
+  .brand-sub{display:block; font-size:.58rem; letter-spacing:.22em; color:var(--ink-soft); font-weight:600; margin-top:1px}
+  main{padding:clamp(40px,7vw,84px) 0 clamp(48px,7vw,90px)}
+  h1{font-family:'Alegreya', Georgia, serif; font-weight:800; line-height:1.1; color:var(--ink); margin:0 0 .4rem; font-size:clamp(1.6rem,4.6vw,3rem); overflow-wrap:break-word; hyphens:auto}
+  .sub{font-family:'Alegreya', Georgia, serif; font-weight:800; line-height:1.1; color:var(--ink-soft); margin:0; font-size:clamp(1.2rem,3.2vw,2rem)}
+  .links{display:flex; flex-wrap:wrap; gap:.6rem 2.2rem; margin-top:2.6rem}
+  .back{display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; color:var(--ink)}
+  .back:hover{color:var(--accent)}
+  footer{border-top:1px solid var(--line); padding:2.6rem 0}
+  footer p{margin:0; font-size:.82rem; color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="container top-inner">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/images/testa-logo.png" alt="Testa">
+      <span class="brand-sub">Ι. ΡΟΥΜΕΛΙΩΤΗΣ &amp; ΣΙΑ Ο.Ε</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+  <h1>Η σελίδα δεν βρέθηκε</h1>
+  <p class="sub" lang="en">Page not found</p>
+  <div class="links">
+    <a class="back" href="/">← Επιστροφή στην αρχική</a>
+    <a class="back" href="/en/" lang="en">← Back to home</a>
+  </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="yr">2026</span> TESTA</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
