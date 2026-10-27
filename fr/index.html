@@ -32,6 +32,47 @@
 <meta name="twitter:description" content="Atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.">
 <meta name="twitter:image" content="https://www.testa.gr/images/og-image.jpg">
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Locksmith"],
+    "name": "TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε",
+    "alternateName": "TESTA",
+    "legalName": "Ι. Ρουμελιώτης & Σια Ο.Ε",
+    "description": "Βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953.",
+    "url": "https://www.testa.gr/",
+    "image": "https://www.testa.gr/images/og-image.jpg",
+    "logo": "https://www.testa.gr/images/testa-logo.png",
+    "telephone": "+302103469528",
+    "email": "testa\u0040otenet.gr",
+    "foundingDate": "1953",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Γ. Δημαράκη 21",
+      "addressLocality": "Αθήνα",
+      "addressRegion": "Αττική",
+      "addressCountry": "GR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.9796841,
+      "longitude": 23.6990457
+    },
+    "hasMap": "https://maps.app.goo.gl/XKV72Av4XKErKLeH6",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/j.r.testa/",
+      "https://www.tiktok.com/@testa.gr",
+      "https://www.facebook.com/profile.php?id=100004579576807"
+    ]
+  }
+</script>
+
 <style>
   @font-face {
     font-family: 'Alegreya';
@@ -897,7 +938,7 @@
           </div>
           <div class="info-row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
-            <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow"></a><noscript><span class="val">testa [at] otenet [dot] gr</span></noscript></div>
+            <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow" hidden=""></a><noscript><span class="val">testa [at] otenet [dot] gr</span></noscript></div>
           </div>
           <div class="info-row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>
@@ -948,45 +989,8 @@
   if (contactEmailLink) {
     contactEmailLink.href = 'mailto:' + CONTACT_EMAIL;
     contactEmailLink.textContent = CONTACT_EMAIL;
+    contactEmailLink.hidden = false;
   }
-
-  var localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Locksmith"],
-    "name": "TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε",
-    "alternateName": "TESTA",
-    "legalName": "Ι. Ρουμελιώτης & Σια Ο.Ε",
-    "description": "Βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953.",
-    "url": "https://www.testa.gr/",
-    "image": "https://www.testa.gr/images/og-image.jpg",
-    "logo": "https://www.testa.gr/images/testa-logo.png",
-    "telephone": "+302103469528",
-    "email": CONTACT_EMAIL,
-    "foundingDate": "1953",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Γ. Δημαράκη 21",
-      "addressLocality": "Αθήνα",
-      "addressRegion": "Αττική",
-      "addressCountry": "GR"
-    },
-    "hasMap": "https://maps.app.goo.gl/XKV72Av4XKErKLeH6",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "17:30"
-    }],
-    "sameAs": [
-      "https://www.instagram.com/j.r.testa/",
-      "https://www.tiktok.com/@testa.gr",
-      "https://www.facebook.com/profile.php?id=100004579576807"
-    ]
-  };
-  var ldScript = document.createElement('script');
-  ldScript.type = 'application/ld+json';
-  ldScript.textContent = JSON.stringify(localBusinessSchema);
-  document.head.appendChild(ldScript);
 
   document.getElementById('yr').textContent = new Date().getFullYear();
 
