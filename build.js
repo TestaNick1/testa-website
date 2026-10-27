@@ -31,7 +31,7 @@ const OUTPUT_PATH = {
 // the generated files.
 const META = {
   el: {
-    title: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
+    title: 'TESTA · Κατασκευαστής κλειδαριών & κυλίνδρων · Αθήνα',
     description: 'TESTA – Ι. Ρουμελιώτης & Σια Ο.Ε: βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953. Ποιότητα Made in Greece με 5 χρόνια εγγύηση.',
     ogSiteName: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε',
     ogTitle: 'TESTA · Ι. Ρουμελιώτης & Σια Ο.Ε — Ασφάλεια που κρατά, από το 1953',
@@ -41,7 +41,7 @@ const META = {
     twitterDescription: 'Βιοτεχνία κλειδαριών, κυλίνδρων και κλειδιών ασφαλείας στην Αθήνα από το 1953. Ποιότητα Made in Greece με 5 χρόνια εγγύηση.'
   },
   en: {
-    title: 'TESTA · I. Roumeliotis & Sia O.E',
+    title: 'TESTA · Lock & Cylinder Manufacturer · Athens, Greece',
     description: 'TESTA – I. Roumeliotis & Sia O.E: lock, cylinder and security key workshop in Athens since 1953. Made in Greece quality with a 5-year warranty.',
     ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Security that lasts, since 1953',
@@ -51,7 +51,7 @@ const META = {
     twitterDescription: 'Lock, cylinder and security key workshop in Athens since 1953. Made in Greece quality with a 5-year warranty.'
   },
   it: {
-    title: 'TESTA · I. Roumeliotis & Sia O.E',
+    title: 'TESTA · Produttore di serrature e cilindri · Atene, Grecia',
     description: 'TESTA – I. Roumeliotis & Sia O.E: officina di serrature, cilindri e chiavi di sicurezza ad Atene dal 1953. Qualità Made in Greece con 5 anni di garanzia.',
     ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Sicurezza che dura, dal 1953',
@@ -61,7 +61,7 @@ const META = {
     twitterDescription: 'Officina di serrature, cilindri e chiavi di sicurezza ad Atene dal 1953. Qualità Made in Greece con 5 anni di garanzia.'
   },
   de: {
-    title: 'TESTA · I. Roumeliotis & Sia O.E',
+    title: 'TESTA · Schloss- und Zylinderhersteller · Athen, Griechenland',
     description: 'TESTA – I. Roumeliotis & Sia O.E: Werkstatt für Schlösser, Zylinder und Sicherheitsschlüssel in Athen seit 1953. Made in Greece Qualität mit 5 Jahren Garantie.',
     ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Sicherheit, die hält, seit 1953',
@@ -71,7 +71,7 @@ const META = {
     twitterDescription: 'Werkstatt für Schlösser, Zylinder und Sicherheitsschlüssel in Athen seit 1953. Made in Greece Qualität mit 5 Jahren Garantie.'
   },
   fr: {
-    title: 'TESTA · I. Roumeliotis & Sia O.E',
+    title: 'TESTA · Fabricant de serrures et cylindres · Athènes, Grèce',
     description: 'TESTA – I. Roumeliotis & Sia O.E : atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.',
     ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Une sécurité durable, depuis 1953',
@@ -81,7 +81,7 @@ const META = {
     twitterDescription: 'Atelier de serrures, cylindres et clés de sécurité à Athènes depuis 1953. Qualité Made in Greece avec 5 ans de garantie.'
   },
   es: {
-    title: 'TESTA · I. Roumeliotis & Sia O.E',
+    title: 'TESTA · Fabricante de cerraduras y cilindros · Atenas, Grecia',
     description: 'TESTA – I. Roumeliotis & Sia O.E: taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.',
     ogSiteName: 'TESTA · I. Roumeliotis & Sia O.E',
     ogTitle: 'TESTA · I. Roumeliotis & Sia O.E — Seguridad que perdura, desde 1953',

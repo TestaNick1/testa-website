@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TESTA · I. Roumeliotis &amp; Sia O.E</title>
+<title>TESTA · Fabricante de cerraduras y cilindros · Atenas, Grecia</title>
 <meta name="description" content="TESTA – I. Roumeliotis &amp; Sia O.E: taller de cerraduras, cilindros y llaves de seguridad en Atenas desde 1953. Calidad Made in Greece con 5 años de garantía.">
 <link rel="canonical" href="https://www.testa.gr/es/">
 <link rel="alternate" hreflang="el" href="https://www.testa.gr/">
@@ -119,6 +119,17 @@
     margin:0 0 .9em;
     display:flex; align-items:center; gap:.6em;
   }
+
+  /* ---------- Skip link ---------- */
+  .skip-link{
+    position:fixed; top:12px; left:12px; z-index:200;
+    padding:.75em 1.3em; border-radius:var(--radius);
+    background:var(--accent); color:var(--accent-ink);
+    font-weight:700; font-size:.86rem; letter-spacing:.03em; text-decoration:none;
+    transform:translateY(calc(-100% - 24px));
+  }
+  .skip-link:focus{transform:none; outline:2px solid var(--accent); outline-offset:3px}
+  main:focus{outline:none}
 
   /* ---------- Header ---------- */
   header{
@@ -278,7 +289,7 @@
     background:var(--bg); border:2px solid var(--accent);
   }
   .timeline .yr{font-family:'Alegreya',serif; font-weight:800; font-size:1.5rem; color:var(--accent); display:block; margin-bottom:.15em}
-  .timeline h4{font-size:1.05rem; margin-bottom:.3em}
+  .timeline h3{font-size:1.05rem; margin-bottom:.3em}
   .timeline p{font-size:.95rem; margin-bottom:0}
   .signature{
     margin-top:2.4rem; padding-top:1.8rem; border-top:1px solid var(--line);
@@ -294,7 +305,7 @@
   .cat-head h3{font-size:1.55rem; margin:0}
   .cat-head .cat-desc{margin:0; font-size:.92rem; max-width:46ch}
   .cat-num{font-family:'Alegreya',serif; font-size:.85rem; color:var(--ink-soft); letter-spacing:.05em}
-  .prod-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:22px}
+  .prod-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:22px}
   .prod-card{
     background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
     overflow:hidden; transition:transform .3s ease, box-shadow .3s ease; position:relative;
@@ -355,6 +366,12 @@
   .info-row .lbl{display:block; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.25em}
   .map-frame{display:block; margin-top:1.6rem; overflow:hidden; border-radius:var(--radius); border:1px solid var(--line)}
   .map-embed{display:block; width:100%; aspect-ratio:16/10; border:0}
+  .map-placeholder{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.5rem; width:100%; aspect-ratio:16/10; padding:.5rem .75rem; text-align:center; background:var(--bg-soft)}
+  .map-placeholder p{margin:0; max-width:40ch; font-size:.8rem; line-height:1.4; text-wrap:balance}
+  .map-load{padding:.6em 1.2em; font-size:.8rem; line-height:1.3; text-transform:none; border:none; cursor:pointer; font-family:inherit}
+  .map-open{font-size:.8rem; font-weight:600; line-height:1.3; color:var(--ink); text-underline-offset:3px}
+  .map-open:hover{color:var(--accent)}
+  .map-load:focus-visible, .map-open:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
   .map-cta{display:inline-flex; align-items:center; gap:.5em; margin-top:.9rem; font-size:.82rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); text-decoration:none}
   .map-cta:hover{text-decoration:underline}
 
@@ -412,13 +429,15 @@
   @media (max-width:520px){
     .hero-stats{flex-wrap:wrap; row-gap:1.2rem}
     .nav-right{gap:.7rem}
+    .map-placeholder p{font-size:.76rem; line-height:1.35}
   }
 </style>
 <noscript>
-<style>.reveal{opacity:1 !important; transform:none !important}</style>
+<style>.reveal{opacity:1 !important; transform:none !important} .map-load{display:none}</style>
 </noscript>
 </head>
 <body>
+<a class="skip-link" href="#top" data-i18n="a11y.skip">Saltar al contenido</a>
 
 <header id="siteHeader">
   <div class="container nav-inner">
@@ -516,7 +535,7 @@
   </nav>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -556,17 +575,17 @@
         <ul class="timeline">
           <li class="reveal">
             <span class="yr">1953</span>
-            <h4 data-i18n="hist.t1title">La Fundación</h4>
+            <h3 data-i18n="hist.t1title">La Fundación</h3>
             <p data-i18n="hist.t1desc">Nikos Roumeliotis, junto con sus dos hermanos, Grigoris y Fotis, funda la empresa en Atenas, fabricando ferretería, cerraduras sencillas y llaves para las necesidades de la época. La calidad de fabricación gana rápidamente clientes en toda Grecia.</p>
           </li>
           <li class="reveal">
             <span class="yr">2011</span>
-            <h4 data-i18n="hist.t2title">Adquisición de DELCA</h4>
+            <h3 data-i18n="hist.t2title">Adquisición de DELCA</h3>
             <p data-i18n="hist.t2desc">TESTA adquiere el fabricante griego de cilindros DELCA, ampliando su gama de productos y manteniendo la producción exclusivamente en Grecia.</p>
           </li>
           <li class="reveal">
             <span class="yr" data-i18n="hist.t3yr">Hoy</span>
-            <h4 data-i18n="hist.t3name">I. Roumeliotis &amp; Sia O.E</h4>
+            <h3 data-i18n="hist.t3name">I. Roumeliotis &amp; Sia O.E</h3>
             <p data-i18n="hist.t3desc">La empresa continúa, con capital propio, diseñando y fabricando cerraduras, cilindros, cerraderos y llaves, 100&nbsp;% en nuestra fábrica de Atenas.</p>
           </li>
         </ul>
@@ -876,14 +895,18 @@
           </div>
           <div class="info-row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
-            <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow"></a></div>
+            <div><span class="lbl">Email</span><a href="#" id="contactEmail" rel="nofollow"></a><noscript><span class="val">testa [at] otenet [dot] gr</span></noscript></div>
           </div>
           <div class="info-row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>
             <div><span class="lbl" data-i18n="lbl.hours">HORARIO</span><span class="val" data-i18n-html="hours.val">Lunes – Viernes<br>08:00 – 17:30</span></div>
           </div>
           <div class="map-frame">
-            <iframe class="map-embed" src="https://www.google.com/maps?q=37.9796841,23.6990457&amp;output=embed" title="Mapa con la ubicación de TESTA en Votanikos, Atenas" data-i18n-title="map.title" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+            <div class="map-placeholder" id="mapPlaceholder">
+              <p data-i18n="map.note">Al mostrar el mapa se carga contenido de Google.</p>
+              <button type="button" class="btn btn-primary map-load" id="mapLoad" data-i18n="map.load">Mostrar el mapa</button>
+              <a class="map-open" href="https://maps.app.goo.gl/XKV72Av4XKErKLeH6" target="_blank" rel="noopener" data-i18n="map.open">Abrir en Google Maps</a>
+            </div>
           </div>
           <a class="map-cta" href="https://maps.app.goo.gl/XKV72Av4XKErKLeH6" target="_blank" rel="noopener" data-i18n="map.cta">VER EN EL MAPA →</a>
         </div>
@@ -1221,6 +1244,9 @@
     "lbl.hours": {el:"ΩΡΑΡΙΟ", en:"OPENING HOURS", it:"ORARI", de:"ÖFFNUNGSZEITEN", fr:"HORAIRES", es:"HORARIO"},
     "hours.val": {el:"Δευτέρα – Παρασκευή<br>08:00 – 17:30", en:"Monday – Friday<br>08:00 – 17:30", it:"Lunedì – Venerdì<br>08:00 – 17:30", de:"Montag – Freitag<br>08:00 – 17:30", fr:"Lundi – Vendredi<br>08h00 – 17h30", es:"Lunes – Viernes<br>08:00 – 17:30"},
     "map.cta": {el:"ΔΕΙΤΕ ΣΤΟΝ ΧΑΡΤΗ →", en:"VIEW ON MAP →", it:"VEDI SULLA MAPPA →", de:"AUF DER KARTE ANSEHEN →", fr:"VOIR SUR LA CARTE →", es:"VER EN EL MAPA →"},
+    "map.note": {el:"Με την εμφάνιση του χάρτη φορτώνεται περιεχόμενο από την Google.", en:"Showing the map loads content from Google.", it:"Mostrando la mappa viene caricato contenuto da Google.", de:"Beim Anzeigen der Karte werden Inhalte von Google geladen.", fr:"L'affichage de la carte charge du contenu depuis Google.", es:"Al mostrar el mapa se carga contenido de Google."},
+    "map.load": {el:"Εμφάνιση χάρτη", en:"Show map", it:"Mostra la mappa", de:"Karte anzeigen", fr:"Afficher la carte", es:"Mostrar el mapa"},
+    "map.open": {el:"Άνοιγμα στο Google Maps", en:"Open in Google Maps", it:"Apri in Google Maps", de:"In Google Maps öffnen", fr:"Ouvrir dans Google Maps", es:"Abrir en Google Maps"},
     "map.title": {el:"Χάρτης με την τοποθεσία της TESTA στον Βοτανικό, Αθήνα", en:"Map showing the location of TESTA in Votanikos, Athens", it:"Mappa con la posizione di TESTA a Votanikos, Atene", de:"Karte mit dem Standort von TESTA in Votanikos, Athen", fr:"Carte indiquant l'emplacement de TESTA à Votanikos, Athènes", es:"Mapa con la ubicación de TESTA en Votanikos, Atenas"},
 
     "form.name": {el:"ΟΝΟΜΑΤΕΠΩΝΥΜΟ", en:"FULL NAME", it:"NOME E COGNOME", de:"VOLLSTÄNDIGER NAME", fr:"NOM COMPLET", es:"NOMBRE COMPLETO"},
@@ -1246,6 +1272,7 @@
     "foot.privacy": {el:"Πολιτική απορρήτου", en:"Privacy Policy", it:"Informativa sulla privacy", de:"Datenschutzerklärung", fr:"Politique de confidentialité", es:"Política de privacidad"},
 
     /* ---- accessibility labels & image alt text (added) ---- */
+    "a11y.skip": {"el":"Μετάβαση στο περιεχόμενο","en":"Skip to content","it":"Vai al contenuto","de":"Zum Inhalt springen","fr":"Aller au contenu","es":"Saltar al contenido"},
     "aria.menuToggle": {"el":"Μενού","en":"Menu","it":"Menu","de":"Menü","fr":"Menu","es":"Menú"},
     "aria.mainNav": {"el":"Κύρια πλοήγηση","en":"Main navigation","it":"Navigazione principale","de":"Hauptnavigation","fr":"Navigation principale","es":"Navegación principal"},
     "aria.mobileNav": {"el":"Κύρια πλοήγηση (κινητό)","en":"Main navigation (mobile)","it":"Navigazione principale (mobile)","de":"Hauptnavigation (mobil)","fr":"Navigation principale (mobile)","es":"Navegación principal (móvil)"},
@@ -1517,6 +1544,19 @@
     prodSearchEmpty.hidden = totalVisible !== 0;
   }
   if (prodSearchInput) prodSearchInput.addEventListener('input', filterProducts);
+
+  var mapLoad = document.getElementById('mapLoad');
+  mapLoad.addEventListener('click', function(){
+    var iframe = document.createElement('iframe');
+    iframe.className = 'map-embed';
+    iframe.src = 'https://www.google.com/maps?q=37.9796841,23.6990457&output=embed';
+    iframe.title = I18N['map.title'][currentLang];
+    iframe.setAttribute('data-i18n-title', 'map.title');
+    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    iframe.setAttribute('allowfullscreen', '');
+    document.getElementById('mapPlaceholder').replaceWith(iframe);
+    iframe.focus();
+  });
 
   var contactForm = document.getElementById('contactForm');
   var formStatus = document.getElementById('formStatus');
