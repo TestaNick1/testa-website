@@ -1557,7 +1557,7 @@
   mapLoad.addEventListener('click', function(){
     var iframe = document.createElement('iframe');
     iframe.className = 'map-embed';
-    iframe.src = 'https://maps.google.com/maps?cid=2607739897060811271&output=embed&hl=el';
+    iframe.src = 'https://maps.google.com/maps?cid=2607739897060811271&output=embed&hl=' + currentLang;
     iframe.title = I18N['map.title'][currentLang];
     iframe.setAttribute('data-i18n-title', 'map.title');
     iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
