@@ -206,7 +206,7 @@
   .menu-toggle:hover{border-color:var(--accent); color:var(--accent)}
   .menu-icon{width:18px; height:18px}
   .menu-icon path{fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round}
-  .mobile-menu{display:none; flex-direction:column; list-style:none; margin:0; padding:8px 0 14px; border-top:1px solid var(--line)}
+  .mobile-menu{display:none; flex-direction:column; list-style:none; margin:0 auto; padding:8px clamp(20px,4vw,56px) 14px; border-top:1px solid var(--line)}
   .mobile-menu.open{background:var(--bg); box-shadow:0 16px 28px -16px rgba(0,0,0,.4)}
   .mobile-menu a{
     display:block; padding:.85em 0; text-decoration:none; font-weight:600; font-size:.86rem; letter-spacing:.05em;
@@ -241,7 +241,7 @@
   .nav-social-link svg{width:14px; height:14px}
   @media (max-width:900px){ .nav-social{display:none} }
   .mobile-social{display:flex; align-items:center; gap:.6rem; margin-top:.4rem; padding-top:1rem; border-top:1px solid var(--line)}
-  .mobile-social .nav-social-link{width:34px; height:34px}
+  .mobile-social .nav-social-link{display:inline-flex; padding:0; width:34px; height:34px}
   .mobile-social .nav-social-link svg{width:15px; height:15px}
   .mobile-menu .menu-cta{display:block; margin:.6rem 0 .2rem; padding:.85em 1.2em; text-align:center; background:var(--accent); color:var(--accent-ink) !important; border-radius:var(--radius); text-transform:uppercase; font-weight:700; font-size:.82rem; letter-spacing:.05em}
 
@@ -1557,7 +1557,7 @@
   mapLoad.addEventListener('click', function(){
     var iframe = document.createElement('iframe');
     iframe.className = 'map-embed';
-    iframe.src = 'https://www.google.com/maps?q=37.9796841,23.6990457&output=embed';
+    iframe.src = 'https://maps.google.com/maps?cid=2607739897060811271&output=embed&hl=el';
     iframe.title = I18N['map.title'][currentLang];
     iframe.setAttribute('data-i18n-title', 'map.title');
     iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
